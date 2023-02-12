@@ -7,16 +7,16 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <link href="https://lmodel.github.io/uco-core/Item/" rel="canonical"/>
 <link href="../assets/images/favicon.png" rel="icon"/>
-<meta content="mkdocs-1.4.2, mkdocs-material-8.5.10" name="generator"/>
+<meta content="mkdocs-1.4.2, mkdocs-material-9.0.12" name="generator"/>
 <title>Class: Item - uco-core</title>
-<link href="../assets/stylesheets/main.975780f9.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/main.0d440cfe.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
 <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
 <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 </head>
-<body data-md-color-accent="None" data-md-color-primary="None" data-md-color-scheme="default" dir="ltr">
+<body data-md-color-accent="" data-md-color-primary="" data-md-color-scheme="default" dir="ltr">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
@@ -75,7 +75,7 @@
 <div class="md-search-result__meta">
             Initializing search
           </div>
-<ol class="md-search-result__list"></ol>
+<ol class="md-search-result__list" role="presentation"></ol>
 </div>
 </div>
 </div>
@@ -196,12 +196,9 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<a class="md-content__button md-icon" href="https://github.com/lmodel/uco-core/edit/master/docs/Item.md" title="Edit this page">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
-</a>
 <h1 id="class-item">Class: Item</h1>
 <p><em>An item is a distinct article or unit.</em></p>
-<p>URI: <a href="https://w3id.org/lmodel/uco-core/Item">core:Item</a></p>
+<p>URI: <a href="https://w3id.org/lmodel/uco-core/Item">uco_core:Item</a></p>
 <div class="mermaid"> classDiagram
     class Item
       UcoObject &lt;|-- Item
@@ -240,51 +237,33 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../externalReference/">externalReference</a></td>
-<td>0..1 <br/> NONE</td>
-<td>Specifies a reference to a resource outside of the UCO</td>
-<td><a href="../UcoObject/">UcoObject</a></td>
-</tr>
-<tr>
-<td><a href="../description/">description</a></td>
-<td>0..1 <br/> NONE</td>
-<td>A description of a particular concept characterization</td>
-<td><a href="../UcoObject/">UcoObject</a></td>
-</tr>
-<tr>
 <td><a href="../createdBy/">createdBy</a></td>
-<td>0..1 <br/> NONE</td>
+<td>0..1 <br/> <a href="../IriType/">IriType</a></td>
 <td>The identity that created a characterization of a concept</td>
 <td><a href="../UcoObject/">UcoObject</a></td>
 </tr>
 <tr>
+<td><a href="../description/">description</a></td>
+<td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
+<td>A description of a particular concept characterization</td>
+<td><a href="../UcoObject/">UcoObject</a></td>
+</tr>
+<tr>
+<td><a href="../externalReference/">externalReference</a></td>
+<td>0..* <br/> <a href="../IriType/">IriType</a></td>
+<td>Specifies a reference to a resource outside of the UCO</td>
+<td><a href="../UcoObject/">UcoObject</a></td>
+</tr>
+<tr>
+<td><a href="../hasFacet/">hasFacet</a></td>
+<td>0..* <br/> <a href="../IriType/">IriType</a></td>
+<td>Further sets of properties characterizing a concept based on the particular c...</td>
+<td><a href="../UcoObject/">UcoObject</a></td>
+</tr>
+<tr>
 <td><a href="../modifiedTime/">modifiedTime</a></td>
-<td>0..1 <br/> <a href="../TimeType/">TimeType</a></td>
+<td>0..* <br/> <a href="../TimeType/">TimeType</a></td>
 <td>Specifies the time that this particular version of the object was modified</td>
-<td><a href="../UcoObject/">UcoObject</a></td>
-</tr>
-<tr>
-<td><a href="../specVersion/">specVersion</a></td>
-<td>0..1 <br/> <a href="../StringType/">StringType</a></td>
-<td>The version of UCO ontology or subontology specification used to characterize...</td>
-<td><a href="../UcoObject/">UcoObject</a></td>
-</tr>
-<tr>
-<td><a href="../objectCreatedTime/">objectCreatedTime</a></td>
-<td>0..1 <br/> <a href="../TimeType/">TimeType</a></td>
-<td>The time at which a characterization of a concept is created</td>
-<td><a href="../UcoObject/">UcoObject</a></td>
-</tr>
-<tr>
-<td><a href="../tag/">tag</a></td>
-<td>0..1 <br/> <a href="../StringType/">StringType</a></td>
-<td>A generic tag/label</td>
-<td><a href="../UcoObject/">UcoObject</a></td>
-</tr>
-<tr>
-<td><a href="../objectMarking/">objectMarking</a></td>
-<td>0..1 <br/> <a href="../MarkingDefinitionAbstraction/">MarkingDefinitionAbstraction</a></td>
-<td>Marking definitions to be applied to a particular concept characterization in...</td>
 <td><a href="../UcoObject/">UcoObject</a></td>
 </tr>
 <tr>
@@ -294,9 +273,27 @@
 <td><a href="../UcoObject/">UcoObject</a></td>
 </tr>
 <tr>
-<td><a href="../hasFacet/">hasFacet</a></td>
-<td>0..1 <br/> NONE</td>
-<td>Further sets of properties characterizing a concept based on the particular c...</td>
+<td><a href="../objectMarking/">objectMarking</a></td>
+<td>0..* <br/> <a href="../IriType/">IriType</a></td>
+<td>Marking definitions to be applied to a particular concept characterization in...</td>
+<td><a href="../UcoObject/">UcoObject</a></td>
+</tr>
+<tr>
+<td><a href="../objectCreatedTime/">objectCreatedTime</a></td>
+<td>0..1 <br/> <a href="../TimeType/">TimeType</a></td>
+<td>The time at which a characterization of a concept is created</td>
+<td><a href="../UcoObject/">UcoObject</a></td>
+</tr>
+<tr>
+<td><a href="../specVersion/">specVersion</a></td>
+<td>0..1 <br/> <a href="../StringType/">StringType</a></td>
+<td>The version of UCO ontology or subontology specification used to characterize...</td>
+<td><a href="../UcoObject/">UcoObject</a></td>
+</tr>
+<tr>
+<td><a href="../tag/">tag</a></td>
+<td>0..* <br/> <a href="../StringType/">StringType</a></td>
+<td>A generic tag/label</td>
 <td><a href="../UcoObject/">UcoObject</a></td>
 </tr>
 </tbody>
@@ -317,11 +314,11 @@
 <tbody>
 <tr>
 <td>self</td>
-<td>core:Item</td>
+<td>uco_core:Item</td>
 </tr>
 <tr>
 <td>native</td>
-<td>core:Item</td>
+<td>uco_core:Item</td>
 </tr>
 <tr>
 <td>exact</td>
@@ -721,7 +718,7 @@ attributes:
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "..", "features": ["content.tabs.link"], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
-<script src="../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+<script id="__config" type="application/json">{"base": "..", "features": ["content.tabs.link"], "search": "../assets/javascripts/workers/search.db81ec45.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+<script src="../assets/javascripts/bundle.4b2c34cd.min.js"></script>
 <script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script><script>mermaid.initialize({});</script></body>
 </html>
