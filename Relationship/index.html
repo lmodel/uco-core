@@ -244,7 +244,7 @@
 <tbody>
 <tr>
 <td><a href="../endTime/">endTime</a></td>
-<td>0..1 <br/> <a href="../TimeType/">TimeType</a></td>
+<td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#dateTime">xsd:dateTime</a></td>
 <td>The ending time of a time range</td>
 <td>direct</td>
 </tr>
@@ -268,7 +268,7 @@
 </tr>
 <tr>
 <td><a href="../startTime/">startTime</a></td>
-<td>0..1 <br/> <a href="../TimeType/">TimeType</a></td>
+<td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#dateTime">xsd:dateTime</a></td>
 <td>The initial time of a time range</td>
 <td>direct</td>
 </tr>
@@ -304,7 +304,7 @@
 </tr>
 <tr>
 <td><a href="../modifiedTime/">modifiedTime</a></td>
-<td>0..* <br/> <a href="../TimeType/">TimeType</a></td>
+<td>0..* <br/> <a href="http://www.w3.org/2001/XMLSchema#dateTime">xsd:dateTime</a></td>
 <td>Specifies the time that this particular version of the object was modified</td>
 <td><a href="../UcoObject/">UcoObject</a></td>
 </tr>
@@ -322,7 +322,7 @@
 </tr>
 <tr>
 <td><a href="../objectCreatedTime/">objectCreatedTime</a></td>
-<td>0..1 <br/> <a href="../TimeType/">TimeType</a></td>
+<td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#dateTime">xsd:dateTime</a></td>
 <td>The time at which a characterization of a concept is created</td>
 <td><a href="../UcoObject/">UcoObject</a></td>
 </tr>
@@ -454,13 +454,16 @@ attributes:
     exact_mappings:
     - NCIT:C82573
     - SIO:000670
+    - sumo:TimePoint
     - wikidata:Q24575125
+    broad_mappings:
+    - sumo:TimePoint
     rank: 1000
     alias: endTime
     owner: relationship
     domain_of:
     - relationship
-    range: time type
+    range: datetime
   isDirectional:
     name: isDirectional
     description: A specification whether or not a relationship assertion is limited
@@ -501,12 +504,14 @@ attributes:
     name: startTime
     description: The initial time of a time range.
     from_schema: https://w3id.org/lmodel/uco-core
+    broad_mappings:
+    - sumo:TimePoint
     rank: 1000
     alias: startTime
     owner: relationship
     domain_of:
     - relationship
-    range: time type
+    range: datetime
   target:
     name: target
     description: The terminating node of a specified relationship.
@@ -744,7 +749,7 @@ attributes:
     - uco object
     - uco object
     - uco object
-    range: time type
+    range: datetime
   name:
     name: name
     description: The name of a particular concept characterization.
@@ -817,12 +822,14 @@ attributes:
     from_schema: https://w3id.org/lmodel/uco-core
     close_mappings:
     - lm_core:creation_date
+    broad_mappings:
+    - sumo:TimePoint
     rank: 1000
     alias: objectCreatedTime
     owner: relationship
     domain_of:
     - uco object
-    range: time type
+    range: datetime
   specVersion:
     name: specVersion
     description: The version of UCO ontology or subontology specification used to

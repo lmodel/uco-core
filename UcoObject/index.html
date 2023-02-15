@@ -297,7 +297,7 @@
 </tr>
 <tr>
 <td><a href="../modifiedTime/">modifiedTime</a></td>
-<td>0..1 <br/> <a href="../TimeType/">TimeType</a></td>
+<td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#dateTime">xsd:dateTime</a></td>
 <td>Specifies the time that this particular version of the object was modified</td>
 <td>direct</td>
 </tr>
@@ -315,7 +315,7 @@
 </tr>
 <tr>
 <td><a href="../objectCreatedTime/">objectCreatedTime</a></td>
-<td>0..1 <br/> <a href="../TimeType/">TimeType</a></td>
+<td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#dateTime">xsd:dateTime</a></td>
 <td>The time at which a characterization of a concept is created</td>
 <td>direct</td>
 </tr>
@@ -1252,7 +1252,7 @@ attributes:
     - uco object
     - uco object
     - uco object
-    range: time type
+    range: datetime
   name:
     name: name
     description: The name of a particular concept characterization.
@@ -1327,12 +1327,14 @@ attributes:
     from_schema: https://w3id.org/lmodel/uco-core
     close_mappings:
     - lm_core:creation_date
+    broad_mappings:
+    - sumo:TimePoint
     rank: 1000
     alias: objectCreatedTime
     owner: uco object
     domain_of:
     - uco object
-    range: time type
+    range: datetime
   specVersion:
     name: specVersion
     description: The version of UCO ontology or subontology specification used to

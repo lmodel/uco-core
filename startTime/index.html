@@ -338,7 +338,7 @@
 </table>
 <h2 id="properties">Properties</h2>
 <ul>
-<li>Range: <a href="../TimeType/">TimeType</a></li>
+<li>Range: <a href="http://www.w3.org/2001/XMLSchema#dateTime">xsd:dateTime</a></li>
 </ul>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
@@ -351,11 +351,13 @@
 <pre><code class="language-yaml">name: startTime
 description: The initial time of a time range.
 from_schema: https://w3id.org/lmodel/uco-core
+broad_mappings:
+- sumo:TimePoint
 rank: 1000
 alias: startTime
 domain_of:
 - relationship
-range: time type
+range: datetime
 
 </code></pre>
 
