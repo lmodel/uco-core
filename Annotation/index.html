@@ -198,7 +198,7 @@
 <article class="md-content__inner md-typeset">
 <h1 id="class-annotation">Class: Annotation</h1>
 <p><em>An annotation is an assertion made in relation to one or more objects.</em></p>
-<p>URI: <a href="https://w3id.org/lmodel/uco-core/Annotation">uco_core:Annotation</a></p>
+<p>URI: <a href="https://w3id.org/lmodel/uco-core/Annotation">core:Annotation</a></p>
 <div class="mermaid"> classDiagram
     class Annotation
       Assertion &lt;|-- Annotation
@@ -249,13 +249,13 @@
 </tr>
 <tr>
 <td><a href="../statement/">statement</a></td>
-<td>0..* <br/> <a href="../StringType/">StringType</a></td>
+<td>0..* <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
 <td>A textual statement of an assertion</td>
 <td><a href="../Assertion/">Assertion</a></td>
 </tr>
 <tr>
 <td><a href="../createdBy/">createdBy</a></td>
-<td>0..1 <br/> <a href="../IriType/">IriType</a></td>
+<td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
 <td>The identity that created a characterization of a concept</td>
 <td><a href="../UcoObject/">UcoObject</a></td>
 </tr>
@@ -267,13 +267,13 @@
 </tr>
 <tr>
 <td><a href="../externalReference/">externalReference</a></td>
-<td>0..* <br/> <a href="../IriType/">IriType</a></td>
+<td>0..* <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
 <td>Specifies a reference to a resource outside of the UCO</td>
 <td><a href="../UcoObject/">UcoObject</a></td>
 </tr>
 <tr>
 <td><a href="../hasFacet/">hasFacet</a></td>
-<td>0..* <br/> <a href="../IriType/">IriType</a></td>
+<td>0..* <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
 <td>Further sets of properties characterizing a concept based on the particular c...</td>
 <td><a href="../UcoObject/">UcoObject</a></td>
 </tr>
@@ -285,13 +285,13 @@
 </tr>
 <tr>
 <td><a href="../name/">name</a></td>
-<td>0..1 <br/> <a href="../StringType/">StringType</a></td>
+<td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
 <td>The name of a particular concept characterization</td>
 <td><a href="../UcoObject/">UcoObject</a></td>
 </tr>
 <tr>
 <td><a href="../objectMarking/">objectMarking</a></td>
-<td>0..* <br/> <a href="../IriType/">IriType</a></td>
+<td>0..* <br/> <a href="../MarkingDefinitionAbstraction/">MarkingDefinitionAbstraction</a></td>
 <td>Marking definitions to be applied to a particular concept characterization in...</td>
 <td><a href="../UcoObject/">UcoObject</a></td>
 </tr>
@@ -303,13 +303,13 @@
 </tr>
 <tr>
 <td><a href="../specVersion/">specVersion</a></td>
-<td>0..1 <br/> <a href="../StringType/">StringType</a></td>
+<td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
 <td>The version of UCO ontology or subontology specification used to characterize...</td>
 <td><a href="../UcoObject/">UcoObject</a></td>
 </tr>
 <tr>
 <td><a href="../tag/">tag</a></td>
-<td>0..* <br/> <a href="../StringType/">StringType</a></td>
+<td>0..* <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
 <td>A generic tag/label</td>
 <td><a href="../UcoObject/">UcoObject</a></td>
 </tr>
@@ -331,11 +331,11 @@
 <tbody>
 <tr>
 <td>self</td>
-<td>uco_core:Annotation</td>
+<td>core:Annotation</td>
 </tr>
 <tr>
 <td>native</td>
-<td>uco_core:Annotation</td>
+<td>core:Annotation</td>
 </tr>
 <tr>
 <td>exact</td>
@@ -347,7 +347,7 @@
 <!-- TODO: investigate https://stackoverflow.com/questions/37606292/how-to-create-tabbed-code-blocks-in-mkdocs-or-sphinx -->
 <h3 id="direct">Direct</h3>
 <details>
-<pre><code class="language-yaml">name: annotation
+<pre><code class="language-yaml">name: Annotation
 description: An annotation is an assertion made in relation to one or more objects.
 from_schema: https://w3id.org/lmodel/uco-core
 exact_mappings:
@@ -355,28 +355,31 @@ exact_mappings:
 - SIO:001166
 - wikidata:Q857525
 rank: 1000
-is_a: assertion
+is_a: Assertion
 slots:
 - object
 slot_usage:
   object:
     name: object
+    annotations:
+      owl:
+        tag: owl
+        value: allValuesFrom
     multivalued: true
     domain_of:
-    - annotation
-    - contextual compilation
-    - enclosing compilation
-    - annotation
-    - contextual compilation
-    - enclosing compilation
-    range: iri type
+    - Annotation
+    - Contextual compilation
+    - Enclosing compilation
+    - Annotation
+    - Contextual compilation
+    - Enclosing compilation
     required: true
 
 </code></pre>
 </details>
 <h3 id="induced">Induced</h3>
 <details>
-<pre><code class="language-yaml">name: annotation
+<pre><code class="language-yaml">name: Annotation
 description: An annotation is an assertion made in relation to one or more objects.
 from_schema: https://w3id.org/lmodel/uco-core
 exact_mappings:
@@ -384,34 +387,41 @@ exact_mappings:
 - SIO:001166
 - wikidata:Q857525
 rank: 1000
-is_a: assertion
+is_a: Assertion
 slot_usage:
   object:
     name: object
+    annotations:
+      owl:
+        tag: owl
+        value: allValuesFrom
     multivalued: true
     domain_of:
-    - annotation
-    - contextual compilation
-    - enclosing compilation
-    - annotation
-    - contextual compilation
-    - enclosing compilation
-    range: iri type
+    - Annotation
+    - Contextual compilation
+    - Enclosing compilation
+    - Annotation
+    - Contextual compilation
+    - Enclosing compilation
     required: true
 attributes:
   object:
     name: object
+    annotations:
+      owl:
+        tag: owl
+        value: allValuesFrom
     description: Specifies one or more UcoObjects.
     from_schema: https://w3id.org/lmodel/uco-core
     rank: 1000
     multivalued: true
     alias: object
-    owner: annotation
+    owner: Annotation
     domain_of:
-    - annotation
-    - contextual compilation
-    - enclosing compilation
-    range: iri type
+    - Annotation
+    - Contextual compilation
+    - Enclosing compilation
+    range: Uco object
     required: true
   statement:
     name: statement
@@ -420,21 +430,25 @@ attributes:
     rank: 1000
     multivalued: true
     alias: statement
-    owner: annotation
+    owner: Annotation
     domain_of:
-    - assertion
-    range: string type
+    - Assertion
+    range: string
   createdBy:
     name: createdBy
     description: The identity that created a characterization of a concept.
     from_schema: https://w3id.org/lmodel/uco-core
+    exact_mappings:
+    - NCIT:C42628
+    narrow_mappings:
+    - lm_core:author
     rank: 1000
-    domain: identity abstraction
+    domain: Identity abstraction
     alias: createdBy
-    owner: annotation
+    owner: Annotation
     domain_of:
-    - uco object
-    range: iri type
+    - Uco object
+    range: string
   description:
     name: description
     description: A description of a particular concept characterization.
@@ -443,22 +457,22 @@ attributes:
     - lm_core:description
     rank: 1000
     alias: description
-    owner: annotation
+    owner: Annotation
     domain_of:
-    - uco object
+    - Uco object
     range: string
   externalReference:
     name: externalReference
     description: Specifies a reference to a resource outside of the UCO.
     from_schema: https://w3id.org/lmodel/uco-core
     rank: 1000
-    domain: external reference
+    domain: External reference
     multivalued: true
     alias: externalReference
-    owner: annotation
+    owner: Annotation
     domain_of:
-    - uco object
-    range: iri type
+    - Uco object
+    range: string
   hasFacet:
     name: hasFacet
     description: Further sets of properties characterizing a concept based on the
@@ -466,13 +480,13 @@ attributes:
       being characterized.
     from_schema: https://w3id.org/lmodel/uco-core
     rank: 1000
-    domain: facet
+    domain: Facet
     multivalued: true
     alias: hasFacet
-    owner: annotation
+    owner: Annotation
     domain_of:
-    - uco object
-    range: iri type
+    - Uco object
+    range: string
   modifiedTime:
     name: modifiedTime
     description: Specifies the time that this particular version of the object was
@@ -486,9 +500,9 @@ attributes:
     rank: 1000
     multivalued: true
     alias: modifiedTime
-    owner: annotation
+    owner: Annotation
     domain_of:
-    - uco object
+    - Uco object
     range: datetime
   name:
     name: name
@@ -498,10 +512,10 @@ attributes:
     - lm_core:name
     rank: 1000
     alias: name
-    owner: annotation
+    owner: Annotation
     domain_of:
-    - uco object
-    range: string type
+    - Uco object
+    range: string
   objectMarking:
     name: objectMarking
     description: Marking definitions to be applied to a particular concept characterization
@@ -510,10 +524,10 @@ attributes:
     rank: 1000
     multivalued: true
     alias: objectMarking
-    owner: annotation
+    owner: Annotation
     domain_of:
-    - uco object
-    range: iri type
+    - Uco object
+    range: Marking definition abstraction
   objectCreatedTime:
     name: objectCreatedTime
     description: The time at which a characterization of a concept is created. This
@@ -526,9 +540,9 @@ attributes:
     - sumo:TimePoint
     rank: 1000
     alias: objectCreatedTime
-    owner: annotation
+    owner: Annotation
     domain_of:
-    - uco object
+    - Uco object
     range: datetime
   specVersion:
     name: specVersion
@@ -539,10 +553,10 @@ attributes:
     - lm_core:version
     rank: 1000
     alias: specVersion
-    owner: annotation
+    owner: Annotation
     domain_of:
-    - uco object
-    range: string type
+    - Uco object
+    range: string
   tag:
     name: tag
     description: A generic tag/label.
@@ -550,10 +564,10 @@ attributes:
     rank: 1000
     multivalued: true
     alias: tag
-    owner: annotation
+    owner: Annotation
     domain_of:
-    - uco object
-    range: string type
+    - Uco object
+    range: string
 
 </code></pre>
 </details>
