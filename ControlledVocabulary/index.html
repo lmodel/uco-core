@@ -351,14 +351,14 @@
 <!-- TODO: investigate https://stackoverflow.com/questions/37606292/how-to-create-tabbed-code-blocks-in-mkdocs-or-sphinx -->
 <h3 id="direct">Direct</h3>
 <details>
-<pre><code class="language-yaml">name: controlled vocabulary
+<pre><code class="language-yaml">name: Controlled vocabulary
 description: A controlled vocabulary is an explicitly constrained set of string values.
 from_schema: https://w3id.org/lmodel/uco-core
 exact_mappings:
 - NCIT:C48697
 - wikidata:Q1469824
 rank: 1000
-is_a: uco object
+is_a: Uco object
 slots:
 - constrainingVocabularyReference
 - constrainingVocabularyName
@@ -367,28 +367,28 @@ slot_usage:
   value:
     name: value
     domain_of:
-    - controlled vocabulary
-    - controlled vocabulary
+    - Controlled vocabulary
+    - Controlled vocabulary
     required: true
 
 </code></pre>
 </details>
 <h3 id="induced">Induced</h3>
 <details>
-<pre><code class="language-yaml">name: controlled vocabulary
+<pre><code class="language-yaml">name: Controlled vocabulary
 description: A controlled vocabulary is an explicitly constrained set of string values.
 from_schema: https://w3id.org/lmodel/uco-core
 exact_mappings:
 - NCIT:C48697
 - wikidata:Q1469824
 rank: 1000
-is_a: uco object
+is_a: Uco object
 slot_usage:
   value:
     name: value
     domain_of:
-    - controlled vocabulary
-    - controlled vocabulary
+    - Controlled vocabulary
+    - Controlled vocabulary
     required: true
 attributes:
   constrainingVocabularyReference:
@@ -399,9 +399,9 @@ attributes:
     from_schema: https://w3id.org/lmodel/uco-core
     rank: 1000
     alias: constrainingVocabularyReference
-    owner: controlled vocabulary
+    owner: Controlled vocabulary
     domain_of:
-    - controlled vocabulary
+    - Controlled vocabulary
     range: iri type
   constrainingVocabularyName:
     name: constrainingVocabularyName
@@ -409,9 +409,9 @@ attributes:
     from_schema: https://w3id.org/lmodel/uco-core
     rank: 1000
     alias: constrainingVocabularyName
-    owner: controlled vocabulary
+    owner: Controlled vocabulary
     domain_of:
-    - controlled vocabulary
+    - Controlled vocabulary
     range: string
   value:
     name: value
@@ -419,10 +419,10 @@ attributes:
     from_schema: https://w3id.org/lmodel/uco-core
     rank: 1000
     alias: value
-    owner: controlled vocabulary
+    owner: Controlled vocabulary
     domain_of:
-    - controlled vocabulary
-    - controlled vocabulary
+    - Controlled vocabulary
+    - Controlled vocabulary
     range: string
     required: true
   createdBy:
@@ -434,11 +434,11 @@ attributes:
     narrow_mappings:
     - lm_core:author
     rank: 1000
-    domain: identity abstraction
+    domain: Identity abstraction
     alias: createdBy
-    owner: controlled vocabulary
+    owner: Controlled vocabulary
     domain_of:
-    - uco object
+    - Uco object
     range: string
   description:
     name: description
@@ -448,47 +448,47 @@ attributes:
     - lm_core:description
     rank: 1000
     alias: description
-    owner: controlled vocabulary
+    owner: Controlled vocabulary
     domain_of:
-    - uco object
+    - Uco object
     range: string
   externalReference:
     name: externalReference
     description: Specifies a reference to a resource outside of the UCO.
     from_schema: https://w3id.org/lmodel/uco-core
     rank: 1000
-    domain: external reference
+    domain: External reference
     multivalued: true
     alias: externalReference
-    owner: controlled vocabulary
+    owner: Controlled vocabulary
     domain_of:
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
     range: string
   hasFacet:
     name: hasFacet
@@ -497,38 +497,38 @@ attributes:
       being characterized.
     from_schema: https://w3id.org/lmodel/uco-core
     rank: 1000
-    domain: facet
+    domain: Facet
     multivalued: true
     alias: hasFacet
-    owner: controlled vocabulary
+    owner: Controlled vocabulary
     domain_of:
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
     range: string
   modifiedTime:
     name: modifiedTime
@@ -543,35 +543,35 @@ attributes:
     rank: 1000
     multivalued: true
     alias: modifiedTime
-    owner: controlled vocabulary
+    owner: Controlled vocabulary
     domain_of:
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
     range: datetime
   name:
     name: name
@@ -581,9 +581,9 @@ attributes:
     - lm_core:name
     rank: 1000
     alias: name
-    owner: controlled vocabulary
+    owner: Controlled vocabulary
     domain_of:
-    - uco object
+    - Uco object
     range: string
   objectMarking:
     name: objectMarking
@@ -593,36 +593,36 @@ attributes:
     rank: 1000
     multivalued: true
     alias: objectMarking
-    owner: controlled vocabulary
+    owner: Controlled vocabulary
     domain_of:
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    range: marking definition abstraction
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    range: Marking definition abstraction
   objectCreatedTime:
     name: objectCreatedTime
     description: The time at which a characterization of a concept is created. This
@@ -635,9 +635,9 @@ attributes:
     - sumo:TimePoint
     rank: 1000
     alias: objectCreatedTime
-    owner: controlled vocabulary
+    owner: Controlled vocabulary
     domain_of:
-    - uco object
+    - Uco object
     range: datetime
   specVersion:
     name: specVersion
@@ -648,9 +648,9 @@ attributes:
     - lm_core:version
     rank: 1000
     alias: specVersion
-    owner: controlled vocabulary
+    owner: Controlled vocabulary
     domain_of:
-    - uco object
+    - Uco object
     range: string
   tag:
     name: tag
@@ -659,35 +659,35 @@ attributes:
     rank: 1000
     multivalued: true
     alias: tag
-    owner: controlled vocabulary
+    owner: Controlled vocabulary
     domain_of:
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
     range: string
 
 </code></pre>

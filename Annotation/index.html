@@ -347,7 +347,7 @@
 <!-- TODO: investigate https://stackoverflow.com/questions/37606292/how-to-create-tabbed-code-blocks-in-mkdocs-or-sphinx -->
 <h3 id="direct">Direct</h3>
 <details>
-<pre><code class="language-yaml">name: annotation
+<pre><code class="language-yaml">name: Annotation
 description: An annotation is an assertion made in relation to one or more objects.
 from_schema: https://w3id.org/lmodel/uco-core
 exact_mappings:
@@ -355,7 +355,7 @@ exact_mappings:
 - SIO:001166
 - wikidata:Q857525
 rank: 1000
-is_a: assertion
+is_a: Assertion
 slots:
 - object
 slot_usage:
@@ -367,19 +367,19 @@ slot_usage:
         value: allValuesFrom
     multivalued: true
     domain_of:
-    - annotation
-    - contextual compilation
-    - enclosing compilation
-    - annotation
-    - contextual compilation
-    - enclosing compilation
+    - Annotation
+    - Contextual compilation
+    - Enclosing compilation
+    - Annotation
+    - Contextual compilation
+    - Enclosing compilation
     required: true
 
 </code></pre>
 </details>
 <h3 id="induced">Induced</h3>
 <details>
-<pre><code class="language-yaml">name: annotation
+<pre><code class="language-yaml">name: Annotation
 description: An annotation is an assertion made in relation to one or more objects.
 from_schema: https://w3id.org/lmodel/uco-core
 exact_mappings:
@@ -387,7 +387,7 @@ exact_mappings:
 - SIO:001166
 - wikidata:Q857525
 rank: 1000
-is_a: assertion
+is_a: Assertion
 slot_usage:
   object:
     name: object
@@ -397,12 +397,12 @@ slot_usage:
         value: allValuesFrom
     multivalued: true
     domain_of:
-    - annotation
-    - contextual compilation
-    - enclosing compilation
-    - annotation
-    - contextual compilation
-    - enclosing compilation
+    - Annotation
+    - Contextual compilation
+    - Enclosing compilation
+    - Annotation
+    - Contextual compilation
+    - Enclosing compilation
     required: true
 attributes:
   object:
@@ -416,12 +416,12 @@ attributes:
     rank: 1000
     multivalued: true
     alias: object
-    owner: annotation
+    owner: Annotation
     domain_of:
-    - annotation
-    - contextual compilation
-    - enclosing compilation
-    range: uco object
+    - Annotation
+    - Contextual compilation
+    - Enclosing compilation
+    range: Uco object
     required: true
   statement:
     name: statement
@@ -430,9 +430,9 @@ attributes:
     rank: 1000
     multivalued: true
     alias: statement
-    owner: annotation
+    owner: Annotation
     domain_of:
-    - assertion
+    - Assertion
     range: string
   createdBy:
     name: createdBy
@@ -443,11 +443,11 @@ attributes:
     narrow_mappings:
     - lm_core:author
     rank: 1000
-    domain: identity abstraction
+    domain: Identity abstraction
     alias: createdBy
-    owner: annotation
+    owner: Annotation
     domain_of:
-    - uco object
+    - Uco object
     range: string
   description:
     name: description
@@ -457,21 +457,21 @@ attributes:
     - lm_core:description
     rank: 1000
     alias: description
-    owner: annotation
+    owner: Annotation
     domain_of:
-    - uco object
+    - Uco object
     range: string
   externalReference:
     name: externalReference
     description: Specifies a reference to a resource outside of the UCO.
     from_schema: https://w3id.org/lmodel/uco-core
     rank: 1000
-    domain: external reference
+    domain: External reference
     multivalued: true
     alias: externalReference
-    owner: annotation
+    owner: Annotation
     domain_of:
-    - uco object
+    - Uco object
     range: string
   hasFacet:
     name: hasFacet
@@ -480,12 +480,12 @@ attributes:
       being characterized.
     from_schema: https://w3id.org/lmodel/uco-core
     rank: 1000
-    domain: facet
+    domain: Facet
     multivalued: true
     alias: hasFacet
-    owner: annotation
+    owner: Annotation
     domain_of:
-    - uco object
+    - Uco object
     range: string
   modifiedTime:
     name: modifiedTime
@@ -500,9 +500,9 @@ attributes:
     rank: 1000
     multivalued: true
     alias: modifiedTime
-    owner: annotation
+    owner: Annotation
     domain_of:
-    - uco object
+    - Uco object
     range: datetime
   name:
     name: name
@@ -512,9 +512,9 @@ attributes:
     - lm_core:name
     rank: 1000
     alias: name
-    owner: annotation
+    owner: Annotation
     domain_of:
-    - uco object
+    - Uco object
     range: string
   objectMarking:
     name: objectMarking
@@ -524,10 +524,10 @@ attributes:
     rank: 1000
     multivalued: true
     alias: objectMarking
-    owner: annotation
+    owner: Annotation
     domain_of:
-    - uco object
-    range: marking definition abstraction
+    - Uco object
+    range: Marking definition abstraction
   objectCreatedTime:
     name: objectCreatedTime
     description: The time at which a characterization of a concept is created. This
@@ -540,9 +540,9 @@ attributes:
     - sumo:TimePoint
     rank: 1000
     alias: objectCreatedTime
-    owner: annotation
+    owner: Annotation
     domain_of:
-    - uco object
+    - Uco object
     range: datetime
   specVersion:
     name: specVersion
@@ -553,9 +553,9 @@ attributes:
     - lm_core:version
     rank: 1000
     alias: specVersion
-    owner: annotation
+    owner: Annotation
     domain_of:
-    - uco object
+    - Uco object
     range: string
   tag:
     name: tag
@@ -564,9 +564,9 @@ attributes:
     rank: 1000
     multivalued: true
     alias: tag
-    owner: annotation
+    owner: Annotation
     domain_of:
-    - uco object
+    - Uco object
     range: string
 
 </code></pre>

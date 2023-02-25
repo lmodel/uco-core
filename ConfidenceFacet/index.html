@@ -270,42 +270,42 @@
 <!-- TODO: investigate https://stackoverflow.com/questions/37606292/how-to-create-tabbed-code-blocks-in-mkdocs-or-sphinx -->
 <h3 id="direct">Direct</h3>
 <details>
-<pre><code class="language-yaml">name: confidence facet
+<pre><code class="language-yaml">name: Confidence facet
 description: A confidence is a grouping of characteristics unique to an asserted level
   of certainty in the accuracy of some information.
 from_schema: https://w3id.org/lmodel/uco-core
 related_mappings:
 - lm_core:ConfidenceLevel
 rank: 1000
-is_a: facet
+is_a: Facet
 slots:
 - confidence
 slot_usage:
   confidence:
     name: confidence
     domain_of:
-    - confidence facet
-    - confidence facet
+    - Confidence facet
+    - Confidence facet
     required: true
 
 </code></pre>
 </details>
 <h3 id="induced">Induced</h3>
 <details>
-<pre><code class="language-yaml">name: confidence facet
+<pre><code class="language-yaml">name: Confidence facet
 description: A confidence is a grouping of characteristics unique to an asserted level
   of certainty in the accuracy of some information.
 from_schema: https://w3id.org/lmodel/uco-core
 related_mappings:
 - lm_core:ConfidenceLevel
 rank: 1000
-is_a: facet
+is_a: Facet
 slot_usage:
   confidence:
     name: confidence
     domain_of:
-    - confidence facet
-    - confidence facet
+    - Confidence facet
+    - Confidence facet
     required: true
 attributes:
   confidence:
@@ -314,10 +314,10 @@ attributes:
     from_schema: https://w3id.org/lmodel/uco-core
     rank: 1000
     alias: confidence
-    owner: confidence facet
+    owner: Confidence facet
     domain_of:
-    - confidence facet
-    - confidence facet
+    - Confidence facet
+    - Confidence facet
     range: non negative integer type
     required: true
     minimum_value: 0

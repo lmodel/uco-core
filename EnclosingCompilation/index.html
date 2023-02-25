@@ -358,14 +358,14 @@
 <!-- TODO: investigate https://stackoverflow.com/questions/37606292/how-to-create-tabbed-code-blocks-in-mkdocs-or-sphinx -->
 <h3 id="direct">Direct</h3>
 <details>
-<pre><code class="language-yaml">name: enclosing compilation
+<pre><code class="language-yaml">name: Enclosing compilation
 description: An enclosing compilation is a container for a grouping of things.
 from_schema: https://w3id.org/lmodel/uco-core
 narrow_mappings:
 - wikidata:Q1643805
 - wikidata:Q17008256
 rank: 1000
-is_a: compilation
+is_a: Compilation
 slots:
 - object
 slot_usage:
@@ -373,55 +373,55 @@ slot_usage:
     name: object
     multivalued: true
     domain_of:
-    - annotation
-    - contextual compilation
-    - enclosing compilation
-    - annotation
-    - contextual compilation
-    - enclosing compilation
-    - annotation
-    - contextual compilation
-    - enclosing compilation
-    - annotation
-    - contextual compilation
-    - enclosing compilation
-    - annotation
-    - contextual compilation
-    - enclosing compilation
+    - Annotation
+    - Contextual compilation
+    - Enclosing compilation
+    - Annotation
+    - Contextual compilation
+    - Enclosing compilation
+    - Annotation
+    - Contextual compilation
+    - Enclosing compilation
+    - Annotation
+    - Contextual compilation
+    - Enclosing compilation
+    - Annotation
+    - Contextual compilation
+    - Enclosing compilation
     required: true
 
 </code></pre>
 </details>
 <h3 id="induced">Induced</h3>
 <details>
-<pre><code class="language-yaml">name: enclosing compilation
+<pre><code class="language-yaml">name: Enclosing compilation
 description: An enclosing compilation is a container for a grouping of things.
 from_schema: https://w3id.org/lmodel/uco-core
 narrow_mappings:
 - wikidata:Q1643805
 - wikidata:Q17008256
 rank: 1000
-is_a: compilation
+is_a: Compilation
 slot_usage:
   object:
     name: object
     multivalued: true
     domain_of:
-    - annotation
-    - contextual compilation
-    - enclosing compilation
-    - annotation
-    - contextual compilation
-    - enclosing compilation
-    - annotation
-    - contextual compilation
-    - enclosing compilation
-    - annotation
-    - contextual compilation
-    - enclosing compilation
-    - annotation
-    - contextual compilation
-    - enclosing compilation
+    - Annotation
+    - Contextual compilation
+    - Enclosing compilation
+    - Annotation
+    - Contextual compilation
+    - Enclosing compilation
+    - Annotation
+    - Contextual compilation
+    - Enclosing compilation
+    - Annotation
+    - Contextual compilation
+    - Enclosing compilation
+    - Annotation
+    - Contextual compilation
+    - Enclosing compilation
     required: true
 attributes:
   object:
@@ -431,24 +431,24 @@ attributes:
     rank: 1000
     multivalued: true
     alias: object
-    owner: enclosing compilation
+    owner: Enclosing compilation
     domain_of:
-    - annotation
-    - contextual compilation
-    - enclosing compilation
-    - annotation
-    - contextual compilation
-    - enclosing compilation
-    - annotation
-    - contextual compilation
-    - enclosing compilation
-    - annotation
-    - contextual compilation
-    - enclosing compilation
-    - annotation
-    - contextual compilation
-    - enclosing compilation
-    range: uco object
+    - Annotation
+    - Contextual compilation
+    - Enclosing compilation
+    - Annotation
+    - Contextual compilation
+    - Enclosing compilation
+    - Annotation
+    - Contextual compilation
+    - Enclosing compilation
+    - Annotation
+    - Contextual compilation
+    - Enclosing compilation
+    - Annotation
+    - Contextual compilation
+    - Enclosing compilation
+    range: Uco object
     required: true
   createdBy:
     name: createdBy
@@ -459,11 +459,11 @@ attributes:
     narrow_mappings:
     - lm_core:author
     rank: 1000
-    domain: identity abstraction
+    domain: Identity abstraction
     alias: createdBy
-    owner: enclosing compilation
+    owner: Enclosing compilation
     domain_of:
-    - uco object
+    - Uco object
     range: string
   description:
     name: description
@@ -473,49 +473,49 @@ attributes:
     - lm_core:description
     rank: 1000
     alias: description
-    owner: enclosing compilation
+    owner: Enclosing compilation
     domain_of:
-    - uco object
+    - Uco object
     range: string
   externalReference:
     name: externalReference
     description: Specifies a reference to a resource outside of the UCO.
     from_schema: https://w3id.org/lmodel/uco-core
     rank: 1000
-    domain: external reference
+    domain: External reference
     multivalued: true
     alias: externalReference
-    owner: enclosing compilation
+    owner: Enclosing compilation
     domain_of:
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
     range: string
   hasFacet:
     name: hasFacet
@@ -524,40 +524,40 @@ attributes:
       being characterized.
     from_schema: https://w3id.org/lmodel/uco-core
     rank: 1000
-    domain: facet
+    domain: Facet
     multivalued: true
     alias: hasFacet
-    owner: enclosing compilation
+    owner: Enclosing compilation
     domain_of:
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
     range: string
   modifiedTime:
     name: modifiedTime
@@ -572,37 +572,37 @@ attributes:
     rank: 1000
     multivalued: true
     alias: modifiedTime
-    owner: enclosing compilation
+    owner: Enclosing compilation
     domain_of:
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
     range: datetime
   name:
     name: name
@@ -612,9 +612,9 @@ attributes:
     - lm_core:name
     rank: 1000
     alias: name
-    owner: enclosing compilation
+    owner: Enclosing compilation
     domain_of:
-    - uco object
+    - Uco object
     range: string
   objectMarking:
     name: objectMarking
@@ -624,38 +624,38 @@ attributes:
     rank: 1000
     multivalued: true
     alias: objectMarking
-    owner: enclosing compilation
+    owner: Enclosing compilation
     domain_of:
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    range: marking definition abstraction
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    range: Marking definition abstraction
   objectCreatedTime:
     name: objectCreatedTime
     description: The time at which a characterization of a concept is created. This
@@ -668,9 +668,9 @@ attributes:
     - sumo:TimePoint
     rank: 1000
     alias: objectCreatedTime
-    owner: enclosing compilation
+    owner: Enclosing compilation
     domain_of:
-    - uco object
+    - Uco object
     range: datetime
   specVersion:
     name: specVersion
@@ -681,9 +681,9 @@ attributes:
     - lm_core:version
     rank: 1000
     alias: specVersion
-    owner: enclosing compilation
+    owner: Enclosing compilation
     domain_of:
-    - uco object
+    - Uco object
     range: string
   tag:
     name: tag
@@ -692,37 +692,37 @@ attributes:
     rank: 1000
     multivalued: true
     alias: tag
-    owner: enclosing compilation
+    owner: Enclosing compilation
     domain_of:
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
-    - uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
+    - Uco object
     range: string
 
 </code></pre>
