@@ -420,7 +420,7 @@
 <!-- TODO: investigate https://stackoverflow.com/questions/37606292/how-to-create-tabbed-code-blocks-in-mkdocs-or-sphinx -->
 <h3 id="direct">Direct</h3>
 <details>
-<pre><code class="language-yaml">name: Uco object
+<pre><code class="language-yaml">name: UcoObject
 description: A UCO object is a representation of a fundamental concept either directly
   inherent to the cyber domain or indirectly related to the cyber domain and necessary
   for contextually characterizing cyber domain concepts and relationships. Within
@@ -432,7 +432,7 @@ related_mappings:
 - wikidata:Q488383
 - SIO:000776
 rank: 1000
-is_a: Uco thing
+is_a: UcoThing
 slots:
 - createdBy
 - description
@@ -445,249 +445,486 @@ slots:
 - specVersion
 - tag
 slot_usage:
+  description:
+    name: description
+    multivalued: true
+    domain_of:
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+  createdBy:
+    name: createdBy
+    domain_of:
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    maximum_cardinality: 0
   externalReference:
     name: externalReference
     multivalued: true
     domain_of:
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    required: false
+    minimum_cardinality: 0
   hasFacet:
     name: hasFacet
     multivalued: true
     domain_of:
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
   modifiedTime:
     name: modifiedTime
     multivalued: true
     domain_of:
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+  name:
+    name: name
+    domain_of:
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    maximum_cardinality: 1
+  objectCreatedTime:
+    name: objectCreatedTime
+    domain_of:
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    maximum_cardinality: 1
   objectMarking:
     name: objectMarking
     multivalued: true
     domain_of:
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+  specVersion:
+    name: specVersion
+    domain_of:
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    maximum_cardinality: 1
   tag:
     name: tag
     multivalued: true
     domain_of:
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
 disjoint_with:
-- Uco inherent characterization thing
+- UcoInherentCharacterizationThing
 
 </code></pre>
 </details>
 <h3 id="induced">Induced</h3>
 <details>
-<pre><code class="language-yaml">name: Uco object
+<pre><code class="language-yaml">name: UcoObject
 description: A UCO object is a representation of a fundamental concept either directly
   inherent to the cyber domain or indirectly related to the cyber domain and necessary
   for contextually characterizing cyber domain concepts and relationships. Within
@@ -699,325 +936,644 @@ related_mappings:
 - wikidata:Q488383
 - SIO:000776
 rank: 1000
-is_a: Uco thing
+is_a: UcoThing
 slot_usage:
+  description:
+    name: description
+    multivalued: true
+    domain_of:
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+  createdBy:
+    name: createdBy
+    domain_of:
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    maximum_cardinality: 0
   externalReference:
     name: externalReference
     multivalued: true
     domain_of:
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    required: false
+    minimum_cardinality: 0
   hasFacet:
     name: hasFacet
     multivalued: true
     domain_of:
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
   modifiedTime:
     name: modifiedTime
     multivalued: true
     domain_of:
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+  name:
+    name: name
+    domain_of:
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    maximum_cardinality: 1
+  objectCreatedTime:
+    name: objectCreatedTime
+    domain_of:
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    maximum_cardinality: 1
   objectMarking:
     name: objectMarking
     multivalued: true
     domain_of:
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+  specVersion:
+    name: specVersion
+    domain_of:
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    maximum_cardinality: 1
   tag:
     name: tag
     multivalued: true
     domain_of:
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
 attributes:
   createdBy:
     name: createdBy
     description: The identity that created a characterization of a concept.
     from_schema: https://w3id.org/lmodel/uco-core
-    exact_mappings:
-    - NCIT:C42628
-    narrow_mappings:
-    - lm_core:author
     rank: 1000
-    domain: Identity abstraction
+    domain: IdentityAbstraction
     alias: createdBy
-    owner: Uco object
+    owner: UcoObject
     domain_of:
-    - Uco object
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
     range: string
+    maximum_cardinality: 0
   description:
     name: description
     description: A description of a particular concept characterization.
     from_schema: https://w3id.org/lmodel/uco-core
-    exact_mappings:
-    - lm_core:description
     rank: 1000
+    multivalued: true
     alias: description
-    owner: Uco object
+    owner: UcoObject
     domain_of:
-    - Uco object
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
     range: string
   externalReference:
     name: externalReference
     description: Specifies a reference to a resource outside of the UCO.
     from_schema: https://w3id.org/lmodel/uco-core
     rank: 1000
-    domain: External reference
+    domain: ExternalReference
     multivalued: true
     alias: externalReference
-    owner: Uco object
+    owner: UcoObject
     domain_of:
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
     range: string
+    required: false
+    minimum_cardinality: 0
   hasFacet:
     name: hasFacet
     description: Further sets of properties characterizing a concept based on the
@@ -1028,51 +1584,51 @@ attributes:
     domain: Facet
     multivalued: true
     alias: hasFacet
-    owner: Uco object
+    owner: UcoObject
     domain_of:
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
     range: string
   modifiedTime:
     name: modifiedTime
@@ -1087,64 +1643,105 @@ attributes:
     rank: 1000
     multivalued: true
     alias: modifiedTime
-    owner: Uco object
+    owner: UcoObject
     domain_of:
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
     range: datetime
   name:
     name: name
     description: The name of a particular concept characterization.
     from_schema: https://w3id.org/lmodel/uco-core
-    exact_mappings:
-    - lm_core:name
     rank: 1000
     alias: name
-    owner: Uco object
+    owner: UcoObject
     domain_of:
-    - Uco object
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
     range: string
+    maximum_cardinality: 1
   objectMarking:
     name: objectMarking
     description: Marking definitions to be applied to a particular concept characterization
@@ -1153,81 +1750,161 @@ attributes:
     rank: 1000
     multivalued: true
     alias: objectMarking
-    owner: Uco object
+    owner: UcoObject
     domain_of:
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    range: Marking definition abstraction
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    range: MarkingDefinitionAbstraction
   objectCreatedTime:
     name: objectCreatedTime
     description: The time at which a characterization of a concept is created. This
       time pertains to the time of creating the record object, and is not an intrinsic
       characteristic of the concept.
     from_schema: https://w3id.org/lmodel/uco-core
-    close_mappings:
-    - lm_core:creation_date
-    broad_mappings:
-    - sumo:TimePoint
     rank: 1000
     alias: objectCreatedTime
-    owner: Uco object
+    owner: UcoObject
     domain_of:
-    - Uco object
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
     range: datetime
+    maximum_cardinality: 1
   specVersion:
     name: specVersion
     description: The version of UCO ontology or subontology specification used to
       characterize a concept.
     from_schema: https://w3id.org/lmodel/uco-core
-    close_mappings:
-    - lm_core:version
     rank: 1000
     alias: specVersion
-    owner: Uco object
+    owner: UcoObject
     domain_of:
-    - Uco object
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
     range: string
+    maximum_cardinality: 1
   tag:
     name: tag
     description: A generic tag/label.
@@ -1235,54 +1912,54 @@ attributes:
     rank: 1000
     multivalued: true
     alias: tag
-    owner: Uco object
+    owner: UcoObject
     domain_of:
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
     range: string
 disjoint_with:
-- Uco inherent characterization thing
+- UcoInherentCharacterizationThing
 
 </code></pre>
 </details>

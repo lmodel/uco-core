@@ -385,25 +385,63 @@
 <!-- TODO: investigate https://stackoverflow.com/questions/37606292/how-to-create-tabbed-code-blocks-in-mkdocs-or-sphinx -->
 <h3 id="direct">Direct</h3>
 <details>
-<pre><code class="language-yaml">name: External reference
+<pre><code class="language-yaml">name: ExternalReference
 description: Characteristics of a reference to a resource outside of the UCO.
 from_schema: https://w3id.org/lmodel/uco-core
 rank: 1000
-is_a: Uco inherent characterization thing
+is_a: UcoInherentCharacterizationThing
 slots:
 - referenceURL
 - definingContext
 - externalIdentifier
+slot_usage:
+  referenceURL:
+    name: referenceURL
+    domain_of:
+    - ExternalReference
+    - ExternalReference
+    maximum_cardinality: 1
+  definingContext:
+    name: definingContext
+    domain_of:
+    - ExternalReference
+    - ExternalReference
+    maximum_cardinality: 1
+  externalIdentifier:
+    name: externalIdentifier
+    domain_of:
+    - ExternalReference
+    - ExternalReference
+    maximum_cardinality: 1
 
 </code></pre>
 </details>
 <h3 id="induced">Induced</h3>
 <details>
-<pre><code class="language-yaml">name: External reference
+<pre><code class="language-yaml">name: ExternalReference
 description: Characteristics of a reference to a resource outside of the UCO.
 from_schema: https://w3id.org/lmodel/uco-core
 rank: 1000
-is_a: Uco inherent characterization thing
+is_a: UcoInherentCharacterizationThing
+slot_usage:
+  referenceURL:
+    name: referenceURL
+    domain_of:
+    - ExternalReference
+    - ExternalReference
+    maximum_cardinality: 1
+  definingContext:
+    name: definingContext
+    domain_of:
+    - ExternalReference
+    - ExternalReference
+    maximum_cardinality: 1
+  externalIdentifier:
+    name: externalIdentifier
+    domain_of:
+    - ExternalReference
+    - ExternalReference
+    maximum_cardinality: 1
 attributes:
   referenceURL:
     name: referenceURL
@@ -411,10 +449,12 @@ attributes:
     from_schema: https://w3id.org/lmodel/uco-core
     rank: 1000
     alias: referenceURL
-    owner: External reference
+    owner: ExternalReference
     domain_of:
-    - External reference
+    - ExternalReference
+    - ExternalReference
     range: iri type
+    maximum_cardinality: 1
   definingContext:
     name: definingContext
     description: A description of the context relevant to the definition of a particular
@@ -422,20 +462,24 @@ attributes:
     from_schema: https://w3id.org/lmodel/uco-core
     rank: 1000
     alias: definingContext
-    owner: External reference
+    owner: ExternalReference
     domain_of:
-    - External reference
+    - ExternalReference
+    - ExternalReference
     range: string
+    maximum_cardinality: 1
   externalIdentifier:
     name: externalIdentifier
     description: An identifier for some information defined external to the UCO context.
     from_schema: https://w3id.org/lmodel/uco-core
     rank: 1000
     alias: externalIdentifier
-    owner: External reference
+    owner: ExternalReference
     domain_of:
-    - External reference
+    - ExternalReference
+    - ExternalReference
     range: string
+    maximum_cardinality: 1
 
 </code></pre>
 </details>

@@ -249,7 +249,7 @@
 </tr>
 <tr>
 <td><a href="../description/">description</a></td>
-<td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
+<td>0..* <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
 <td>A description of a particular concept characterization</td>
 <td><a href="../UcoObject/">UcoObject</a></td>
 </tr>
@@ -438,7 +438,7 @@
 <!-- TODO: investigate https://stackoverflow.com/questions/37606292/how-to-create-tabbed-code-blocks-in-mkdocs-or-sphinx -->
 <h3 id="direct">Direct</h3>
 <details>
-<pre><code class="language-yaml">name: Identity abstraction
+<pre><code class="language-yaml">name: IdentityAbstraction
 description: An identity abstraction is a grouping of identifying characteristics
   unique to an individual or organization. This class is an ontological structural
   abstraction for this concept. Implementations of this concept should utilize the
@@ -447,13 +447,13 @@ from_schema: https://w3id.org/lmodel/uco-core
 related_mappings:
 - NCIT:C68806
 rank: 1000
-is_a: Uco object
+is_a: UcoObject
 
 </code></pre>
 </details>
 <h3 id="induced">Induced</h3>
 <details>
-<pre><code class="language-yaml">name: Identity abstraction
+<pre><code class="language-yaml">name: IdentityAbstraction
 description: An identity abstraction is a grouping of identifying characteristics
   unique to an individual or organization. This class is an ontological structural
   abstraction for this concept. Implementations of this concept should utilize the
@@ -462,79 +462,141 @@ from_schema: https://w3id.org/lmodel/uco-core
 related_mappings:
 - NCIT:C68806
 rank: 1000
-is_a: Uco object
+is_a: UcoObject
 attributes:
   createdBy:
     name: createdBy
     description: The identity that created a characterization of a concept.
     from_schema: https://w3id.org/lmodel/uco-core
-    exact_mappings:
-    - NCIT:C42628
-    narrow_mappings:
-    - lm_core:author
     rank: 1000
-    domain: Identity abstraction
+    domain: IdentityAbstraction
     alias: createdBy
-    owner: Identity abstraction
+    owner: IdentityAbstraction
     domain_of:
-    - Uco object
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
     range: string
+    maximum_cardinality: 0
   description:
     name: description
     description: A description of a particular concept characterization.
     from_schema: https://w3id.org/lmodel/uco-core
-    exact_mappings:
-    - lm_core:description
     rank: 1000
+    multivalued: true
     alias: description
-    owner: Identity abstraction
+    owner: IdentityAbstraction
     domain_of:
-    - Uco object
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
     range: string
   externalReference:
     name: externalReference
     description: Specifies a reference to a resource outside of the UCO.
     from_schema: https://w3id.org/lmodel/uco-core
     rank: 1000
-    domain: External reference
+    domain: ExternalReference
     multivalued: true
     alias: externalReference
-    owner: Identity abstraction
+    owner: IdentityAbstraction
     domain_of:
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
     range: string
+    required: false
+    minimum_cardinality: 0
   hasFacet:
     name: hasFacet
     description: Further sets of properties characterizing a concept based on the
@@ -545,41 +607,41 @@ attributes:
     domain: Facet
     multivalued: true
     alias: hasFacet
-    owner: Identity abstraction
+    owner: IdentityAbstraction
     domain_of:
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
     range: string
   modifiedTime:
     name: modifiedTime
@@ -594,54 +656,85 @@ attributes:
     rank: 1000
     multivalued: true
     alias: modifiedTime
-    owner: Identity abstraction
+    owner: IdentityAbstraction
     domain_of:
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
     range: datetime
   name:
     name: name
     description: The name of a particular concept characterization.
     from_schema: https://w3id.org/lmodel/uco-core
-    exact_mappings:
-    - lm_core:name
     rank: 1000
     alias: name
-    owner: Identity abstraction
+    owner: IdentityAbstraction
     domain_of:
-    - Uco object
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
     range: string
+    maximum_cardinality: 1
   objectMarking:
     name: objectMarking
     description: Marking definitions to be applied to a particular concept characterization
@@ -650,71 +743,131 @@ attributes:
     rank: 1000
     multivalued: true
     alias: objectMarking
-    owner: Identity abstraction
+    owner: IdentityAbstraction
     domain_of:
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    range: Marking definition abstraction
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    range: MarkingDefinitionAbstraction
   objectCreatedTime:
     name: objectCreatedTime
     description: The time at which a characterization of a concept is created. This
       time pertains to the time of creating the record object, and is not an intrinsic
       characteristic of the concept.
     from_schema: https://w3id.org/lmodel/uco-core
-    close_mappings:
-    - lm_core:creation_date
-    broad_mappings:
-    - sumo:TimePoint
     rank: 1000
     alias: objectCreatedTime
-    owner: Identity abstraction
+    owner: IdentityAbstraction
     domain_of:
-    - Uco object
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
     range: datetime
+    maximum_cardinality: 1
   specVersion:
     name: specVersion
     description: The version of UCO ontology or subontology specification used to
       characterize a concept.
     from_schema: https://w3id.org/lmodel/uco-core
-    close_mappings:
-    - lm_core:version
     rank: 1000
     alias: specVersion
-    owner: Identity abstraction
+    owner: IdentityAbstraction
     domain_of:
-    - Uco object
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
     range: string
+    maximum_cardinality: 1
   tag:
     name: tag
     description: A generic tag/label.
@@ -722,41 +875,41 @@ attributes:
     rank: 1000
     multivalued: true
     alias: tag
-    owner: Identity abstraction
+    owner: IdentityAbstraction
     domain_of:
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
-    - Uco object
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
+    - UcoObject
     range: string
 
 </code></pre>
