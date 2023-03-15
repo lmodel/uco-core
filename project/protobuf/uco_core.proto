@@ -1,0 +1,240 @@
+// An annotation is an assertion made in relation to one or more objects.
+message Annotation
+ {
+  string createdBy = 0
+ repeated  string description = 0
+ repeated  string externalReference = 0
+ repeated  string hasFacet = 0
+ repeated  datetime modifiedTime = 0
+  string name = 0
+ repeated  markingDefinitionAbstraction objectMarking = 0
+  datetime objectCreatedTime = 0
+  string specVersion = 0
+ repeated  string tag = 0
+ repeated  string statement = 0
+ repeated  ucoObject object = 0
+ }
+// An assertion is a statement declared to be true.
+message Assertion
+ {
+  string createdBy = 0
+ repeated  string description = 0
+ repeated  string externalReference = 0
+ repeated  string hasFacet = 0
+ repeated  datetime modifiedTime = 0
+  string name = 0
+ repeated  markingDefinitionAbstraction objectMarking = 0
+  datetime objectCreatedTime = 0
+  string specVersion = 0
+ repeated  string tag = 0
+ repeated  string statement = 0
+ }
+// An attributed name is a name of an entity issued by some attributed naming authority.
+message AttributedName
+ {
+  string createdBy = 0
+ repeated  string description = 0
+ repeated  string externalReference = 0
+ repeated  string hasFacet = 0
+ repeated  datetime modifiedTime = 0
+  string name = 0
+ repeated  markingDefinitionAbstraction objectMarking = 0
+  datetime objectCreatedTime = 0
+  string specVersion = 0
+ repeated  string tag = 0
+  string namingAuthority = 0
+ }
+// A bundle is a container for a grouping of UCO content with no presumption of shared context.
+message Bundle
+ {
+  string createdBy = 0
+ repeated  string description = 0
+ repeated  string externalReference = 0
+ repeated  string hasFacet = 0
+ repeated  datetime modifiedTime = 0
+  string name = 0
+ repeated  markingDefinitionAbstraction objectMarking = 0
+  datetime objectCreatedTime = 0
+  string specVersion = 0
+ repeated  string tag = 0
+ repeated  ucoObject object = 0
+ }
+// A compilation is a grouping of things.
+message Compilation
+ {
+  string createdBy = 0
+ repeated  string description = 0
+ repeated  string externalReference = 0
+ repeated  string hasFacet = 0
+ repeated  datetime modifiedTime = 0
+  string name = 0
+ repeated  markingDefinitionAbstraction objectMarking = 0
+  datetime objectCreatedTime = 0
+  string specVersion = 0
+ repeated  string tag = 0
+ }
+// A confidence is a grouping of characteristics unique to an asserted level of certainty in the accuracy of some information.
+message ConfidenceFacet
+ {
+  nonNegativeIntegerType confidence = 0
+ }
+// A contextual compilation is a grouping of things sharing some context (e.g., a set of network connections observed on a given day, all accounts associated with a given person).
+message ContextualCompilation
+ {
+  string createdBy = 0
+ repeated  string description = 0
+ repeated  string externalReference = 0
+ repeated  string hasFacet = 0
+ repeated  datetime modifiedTime = 0
+  string name = 0
+ repeated  markingDefinitionAbstraction objectMarking = 0
+  datetime objectCreatedTime = 0
+  string specVersion = 0
+ repeated  string tag = 0
+ repeated  ucoObject object = 0
+ }
+// A controlled vocabulary is an explicitly constrained set of string values.
+message ControlledVocabulary
+ {
+  string createdBy = 0
+ repeated  string description = 0
+ repeated  string externalReference = 0
+ repeated  string hasFacet = 0
+ repeated  datetime modifiedTime = 0
+  string name = 0
+ repeated  markingDefinitionAbstraction objectMarking = 0
+  datetime objectCreatedTime = 0
+  string specVersion = 0
+ repeated  string tag = 0
+  iriType constrainingVocabularyReference = 0
+  string constrainingVocabularyName = 0
+  string value = 0
+ }
+// An enclosing compilation is a container for a grouping of things.
+message EnclosingCompilation
+ {
+  string createdBy = 0
+ repeated  string description = 0
+ repeated  string externalReference = 0
+ repeated  string hasFacet = 0
+ repeated  datetime modifiedTime = 0
+  string name = 0
+ repeated  markingDefinitionAbstraction objectMarking = 0
+  datetime objectCreatedTime = 0
+  string specVersion = 0
+ repeated  string tag = 0
+ repeated  ucoObject object = 0
+ }
+// Characteristics of a reference to a resource outside of the UCO.
+message ExternalReference
+ {
+  iriType referenceURL = 0
+  string definingContext = 0
+  string externalIdentifier = 0
+ }
+// A grouping is a compilation of referenced UCO content with a shared context.
+message Grouping
+ {
+  string createdBy = 0
+ repeated  string description = 0
+ repeated  string externalReference = 0
+ repeated  string hasFacet = 0
+ repeated  datetime modifiedTime = 0
+  string name = 0
+ repeated  markingDefinitionAbstraction objectMarking = 0
+  datetime objectCreatedTime = 0
+  string specVersion = 0
+ repeated  string tag = 0
+ repeated  ucoObject object = 0
+ repeated  string context = 0
+ }
+// An identity abstraction is a grouping of identifying characteristics unique to an individual or organization. This class is an ontological structural abstraction for this concept. Implementations of this concept should utilize the identity:Identity class.
+message IdentityAbstraction
+ {
+  string createdBy = 0
+ repeated  string description = 0
+ repeated  string externalReference = 0
+ repeated  string hasFacet = 0
+ repeated  datetime modifiedTime = 0
+  string name = 0
+ repeated  markingDefinitionAbstraction objectMarking = 0
+  datetime objectCreatedTime = 0
+  string specVersion = 0
+ repeated  string tag = 0
+ }
+// An item is a distinct article or unit.
+message Item
+ {
+  string createdBy = 0
+ repeated  string description = 0
+ repeated  string externalReference = 0
+ repeated  string hasFacet = 0
+ repeated  datetime modifiedTime = 0
+  string name = 0
+ repeated  markingDefinitionAbstraction objectMarking = 0
+  datetime objectCreatedTime = 0
+  string specVersion = 0
+ repeated  string tag = 0
+ }
+// A marking definition abstraction is a grouping of characteristics unique to the expression of a specific data marking conveying restrictions, permissions, and other guidance for how marked data can be used and shared. This class is an ontological structural abstraction for this concept. Implementations of this concept should utilize the marking MarkingDefinition class.
+message MarkingDefinitionAbstraction
+ {
+  string createdBy = 0
+ repeated  string description = 0
+ repeated  string externalReference = 0
+ repeated  string hasFacet = 0
+ repeated  datetime modifiedTime = 0
+  string name = 0
+ repeated  markingDefinitionAbstraction objectMarking = 0
+  datetime objectCreatedTime = 0
+  string specVersion = 0
+ repeated  string tag = 0
+ }
+// A modus operandi is a particular method of operation (how a particular entity behaves or the resources they use).
+message ModusOperandi
+ {
+  string createdBy = 0
+ repeated  string description = 0
+ repeated  string externalReference = 0
+ repeated  string hasFacet = 0
+ repeated  datetime modifiedTime = 0
+  string name = 0
+ repeated  markingDefinitionAbstraction objectMarking = 0
+  datetime objectCreatedTime = 0
+  string specVersion = 0
+ repeated  string tag = 0
+ }
+// A relationship is a grouping of characteristics unique to an assertion that one or more objects are related to another object in some way.
+message Relationship
+ {
+  string createdBy = 0
+ repeated  string description = 0
+ repeated  string externalReference = 0
+ repeated  string hasFacet = 0
+ repeated  datetime modifiedTime = 0
+  string name = 0
+ repeated  markingDefinitionAbstraction objectMarking = 0
+  datetime objectCreatedTime = 0
+  string specVersion = 0
+ repeated  string tag = 0
+ repeated  datetime endTime = 0
+  booleanType isDirectional = 0
+  string kindOfRelationship = 0
+ repeated  ucoObject source = 0
+ repeated  datetime startTime = 0
+  ucoObject target = 0
+ }
+// A UCO object is a representation of a fundamental concept either directly inherent to the cyber domain or indirectly related to the cyber domain and necessary for contextually characterizing cyber domain concepts and relationships. Within the Unified Cyber Ontology (UCO) structure this is the base class acting as a consistent, unifying and interoperable foundation for all explicit and inter-relatable content objects.
+message UcoObject
+ {
+  string createdBy = 0
+ repeated  string description = 0
+ repeated  string externalReference = 0
+ repeated  string hasFacet = 0
+ repeated  datetime modifiedTime = 0
+  string name = 0
+ repeated  markingDefinitionAbstraction objectMarking = 0
+  datetime objectCreatedTime = 0
+  string specVersion = 0
+ repeated  string tag = 0
+ }

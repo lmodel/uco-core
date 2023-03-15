@@ -1,0 +1,14 @@
+{
+   "BFO": "http://purl.obolibrary.org/obo/BFO_",
+   "NCIT": "http://purl.obolibrary.org/obo/NCIT_",
+   "SEPIO": "http://purl.obolibrary.org/obo/SEPIO_",
+   "SIO": "http://identifiers.org/sio/",
+   "core": "https://w3id.org/lmodel/uco-core/",
+   "dcid": "https://datacommons.org/browser/",
+   "linkml": "https://w3id.org/linkml/",
+   "lm_core": "https://w3id.org/lmodel/core/",
+   "owl": "http://www.w3.org/2002/07/owl#",
+   "sh": "https://w3id.org/shacl/",
+   "sumo": "https://w3id.org/sumo/kb/",
+   "wikidata": "http://identifiers.org/wikidata/"
+}
