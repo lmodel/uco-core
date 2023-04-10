@@ -300,7 +300,7 @@
 <tr>
 <td><a href="../description/">description</a></td>
 <td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
-<td>A description of a particular concept characterization</td>
+<td>A human-readable description of an entity</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -605,9 +605,10 @@ attributes:
     maximum_cardinality: 0
   description:
     name: description
-    description: A description of a particular concept characterization.
+    description: A human-readable description of an entity
     from_schema: https://w3id.org/lmodel/uco-core
     rank: 1000
+    slot_uri: dcterms:description
     multivalued: true
     alias: description
     owner: UcoObject
@@ -664,6 +665,7 @@ attributes:
     description: The name of a particular concept characterization.
     from_schema: https://w3id.org/lmodel/uco-core
     rank: 1000
+    slot_uri: rdfs:label
     alias: name
     owner: UcoObject
     domain_of:
