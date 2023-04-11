@@ -1,0 +1,6 @@
+name: uco_core
+author: Noel McLoughin <noel.mcloughlin@gmail.com>
+description: Classes and Properties shared across Unified Cyber Ontology
+source_schema_path: src/uco_core/schema/uco_core.yaml
+google_sheet_id: 1wVoaiFg47aT9YWNeRfTZ8tYHN8s8PAuDx5i2HUcDpvQ
+google_sheet_tabs: personinfo enums

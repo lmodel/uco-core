@@ -1,0 +1,261 @@
+BASE <https://w3id.org/lmodel/uco-core/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX linkml: <https://w3id.org/linkml/>
+
+
+<StringType> xsd:string
+
+<LiteralType> rdf:literal
+
+<NonNegativeIntegerType> xsd:nonNegativeInteger
+
+<StatementType> xsd:string
+
+<IriType> IRI
+
+<BooleanType> xsd:boolean
+
+<HexBinaryType> xsd:hexBinary
+
+linkml:String xsd:string
+
+linkml:Integer xsd:integer
+
+linkml:Boolean xsd:boolean
+
+linkml:Float xsd:float
+
+linkml:Double xsd:double
+
+linkml:Decimal xsd:decimal
+
+linkml:Time xsd:dateTime
+
+linkml:Date xsd:date
+
+linkml:Datetime xsd:dateTime
+
+linkml:DateOrDatetime linkml:DateOrDatetime
+
+linkml:Uriorcurie IRI
+
+linkml:Curie xsd:string
+
+linkml:Uri IRI
+
+linkml:Ncname xsd:string
+
+linkml:Objectidentifier IRI
+
+linkml:Nodeidentifier NONLITERAL
+
+<Annotation> CLOSED {
+    (  $<Annotation_tes> (  &<Assertion_tes> ;
+          rdf:type [ <Assertion> ] ? ;
+          <object> @<UcoObject> +
+       ) ;
+       rdf:type [ <Annotation> ] ?
+    )
+}
+
+<Assertion>  (
+    CLOSED {
+       (  $<Assertion_tes> (  &<UcoObject_tes> ;
+             rdf:type [ <UcoObject> ] ? ;
+             <statement> @linkml:String *
+          ) ;
+          rdf:type [ <Assertion> ] ?
+       )
+    } OR @<Annotation>
+)
+
+<AttributedName> CLOSED {
+    (  $<AttributedName_tes> (  &<UcoObject_tes> ;
+          rdf:type [ <UcoObject> ] ? ;
+          <namingAuthority> @linkml:String ?
+       ) ;
+       rdf:type [ <AttributedName> ] ?
+    )
+}
+
+<Bundle> CLOSED {
+    (  $<Bundle_tes> (  &<EnclosingCompilation_tes> ;
+          rdf:type [ <EnclosingCompilation> ] ?
+       ) ;
+       rdf:type [ <Bundle> ] ?
+    )
+}
+
+<Compilation>  (
+    CLOSED {
+       (  $<Compilation_tes> (  &<UcoObject_tes> ;
+             rdf:type [ <UcoObject> ] ?
+          ) ;
+          rdf:type [ <Compilation> ] ?
+       )
+    } OR @<ContextualCompilation> OR @<EnclosingCompilation>
+)
+
+<ConfidenceFacet> CLOSED {
+    (  $<ConfidenceFacet_tes> (  &<Facet_tes> ;
+          rdf:type [ <Facet> ] ? ;
+          <confidence> @<NonNegativeIntegerType>
+       ) ;
+       rdf:type [ <ConfidenceFacet> ] ?
+    )
+}
+
+<ContextualCompilation>  (
+    CLOSED {
+       (  $<ContextualCompilation_tes> (  &<Compilation_tes> ;
+             rdf:type [ <Compilation> ] ? ;
+             <object> @<UcoObject> +
+          ) ;
+          rdf:type [ <ContextualCompilation> ] ?
+       )
+    } OR @<Grouping>
+)
+
+<ControlledVocabulary> CLOSED {
+    (  $<ControlledVocabulary_tes> (  &<UcoObject_tes> ;
+          rdf:type [ <UcoObject> ] ? ;
+          <constrainingVocabularyReference> @<IriType> ? ;
+          <constrainingVocabularyName> @linkml:String ? ;
+          <value> @linkml:String
+       ) ;
+       rdf:type [ <ControlledVocabulary> ] ?
+    )
+}
+
+<EnclosingCompilation>  (
+    CLOSED {
+       (  $<EnclosingCompilation_tes> (  &<Compilation_tes> ;
+             rdf:type [ <Compilation> ] ? ;
+             <object> @<UcoObject> *
+          ) ;
+          rdf:type [ <EnclosingCompilation> ] ?
+       )
+    } OR @<Bundle>
+)
+
+<ExternalReference> CLOSED {
+    (  $<ExternalReference_tes> (  &<UcoInherentCharacterizationThing_tes> ;
+          rdf:type [ <UcoInherentCharacterizationThing> ] ? ;
+          <referenceURL> @<IriType> ? ;
+          <definingContext> @linkml:String ? ;
+          <externalIdentifier> @linkml:String ?
+       ) ;
+       rdf:type [ <ExternalReference> ] ?
+    )
+}
+
+<Facet>  (
+    {
+       (  $<Facet_tes> (  &<UcoInherentCharacterizationThing_tes> ;
+             rdf:type [ <UcoInherentCharacterizationThing> ] ?
+          ) ;
+          rdf:type [ <Facet> ] ?
+       )
+    } OR @<ConfidenceFacet>
+)
+
+<Grouping> CLOSED {
+    (  $<Grouping_tes> (  &<ContextualCompilation_tes> ;
+          rdf:type [ <ContextualCompilation> ] ? ;
+          <context> @linkml:String *
+       ) ;
+       rdf:type [ <Grouping> ] ?
+    )
+}
+
+<IdentityAbstraction> CLOSED {
+    (  $<IdentityAbstraction_tes> (  &<UcoObject_tes> ;
+          rdf:type [ <UcoObject> ] ?
+       ) ;
+       rdf:type [ <IdentityAbstraction> ] ?
+    )
+}
+
+<Item> CLOSED {
+    (  $<Item_tes> (  &<UcoObject_tes> ;
+          rdf:type [ <UcoObject> ] ?
+       ) ;
+       rdf:type [ <Item> ] ?
+    )
+}
+
+<MarkingDefinitionAbstraction> CLOSED {
+    (  $<MarkingDefinitionAbstraction_tes> (  &<UcoObject_tes> ;
+          rdf:type [ <UcoObject> ] ?
+       ) ;
+       rdf:type [ <MarkingDefinitionAbstraction> ] ?
+    )
+}
+
+<ModusOperandi> CLOSED {
+    (  $<ModusOperandi_tes> (  &<UcoObject_tes> ;
+          rdf:type [ <UcoObject> ] ?
+       ) ;
+       rdf:type [ <ModusOperandi> ] ?
+    )
+}
+
+<Relationship> CLOSED {
+    (  $<Relationship_tes> (  &<UcoObject_tes> ;
+          rdf:type [ <UcoObject> ] ? ;
+          <endTime> @linkml:Datetime * ;
+          <isDirectional> @<BooleanType> ;
+          <kindOfRelationship> @linkml:String ? ;
+          <source> @<UcoObject> + ;
+          <startTime> @linkml:Datetime * ;
+          <target> @<UcoObject>
+       ) ;
+       rdf:type [ <Relationship> ] ?
+    )
+}
+
+<UcoInherentCharacterizationThing>  (
+    CLOSED {
+       (  $<UcoInherentCharacterizationThing_tes> (  &<UcoThing_tes> ;
+             rdf:type [ <UcoThing> ] ?
+          ) ;
+          rdf:type [ <UcoInherentCharacterizationThing> ] ?
+       )
+    } OR @<ExternalReference> OR @<Facet>
+)
+
+<UcoObject>  (
+    CLOSED {
+       (  $<UcoObject_tes> (  &<UcoThing_tes> ;
+             rdf:type [ <UcoThing> ] ? ;
+             <createdBy> @linkml:String ? ;
+             dcterms:description @linkml:String * ;
+             <externalReference> @linkml:String * ;
+             <hasFacet> @linkml:String * ;
+             <modifiedTime> @linkml:Datetime * ;
+             rdfs:label @linkml:String ? ;
+             <objectMarking> @<MarkingDefinitionAbstraction> * ;
+             <objectCreatedTime> @linkml:Datetime ? ;
+             <specVersion> @linkml:String ? ;
+             <tag> @linkml:String *
+          ) ;
+          rdf:type [ <UcoObject> ] ?
+       )
+    } OR @<Assertion> OR @<AttributedName> OR @<Compilation> OR @<ControlledVocabulary> OR @<IdentityAbstraction> OR @<Item> OR
+    @<MarkingDefinitionAbstraction> OR @<ModusOperandi> OR @<Relationship>
+)
+
+<UcoThing>  (
+    @<UcoInherentCharacterizationThing> OR @<UcoObject>
+)
+
+<UcoThing_struct> {
+    (  $<UcoThing_tes> rdf:type . * ;
+       rdf:type [ <UcoThing> ] ?
+    )
+}
+
+

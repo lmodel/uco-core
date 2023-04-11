@@ -1,0 +1,1215 @@
+{
+    "$defs": {
+        "Annotation": {
+            "additionalProperties": false,
+            "description": "An annotation is an assertion made in relation to one or more objects.",
+            "properties": {
+                "createdBy": {
+                    "description": "The identity that created a characterization of a concept.",
+                    "type": "string"
+                },
+                "description": {
+                    "description": "A human-readable description of an entity",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "externalReference": {
+                    "description": "Specifies a reference to a resource outside of the UCO.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "minItems": 0,
+                    "type": "array"
+                },
+                "hasFacet": {
+                    "description": "Further sets of properties characterizing a concept based on the particular context of the class and of the particular instance of the concept being characterized.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "modifiedTime": {
+                    "description": "Specifies the time that this particular version of the object was modified. The object creator can use the time it deems most appropriate as the time this version of the object was modified. The value of the modified property for a given object version MUST be later than or equal to the value of the created property. Object creators MUST update the modified property when creating a new version of an object. The modified timestamp MUST be precise to the nearest millisecond (exactly three digits after the decimal place in seconds).",
+                    "items": {
+                        "format": "date-time",
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "name": {
+                    "description": "The name of a particular concept characterization.",
+                    "type": "string"
+                },
+                "object": {
+                    "description": "Specifies one or more UcoObjects.",
+                    "items": {
+                        "$ref": "#/$defs/UcoObject"
+                    },
+                    "type": "array"
+                },
+                "objectCreatedTime": {
+                    "description": "The time at which a characterization of a concept is created. This time pertains to the time of creating the record object, and is not an intrinsic characteristic of the concept.",
+                    "format": "date-time",
+                    "type": "string"
+                },
+                "objectMarking": {
+                    "description": "Marking definitions to be applied to a particular concept characterization in its entirety.",
+                    "items": {
+                        "$ref": "#/$defs/MarkingDefinitionAbstraction"
+                    },
+                    "type": "array"
+                },
+                "specVersion": {
+                    "description": "The version of UCO ontology or subontology specification used to characterize a concept.",
+                    "type": "string"
+                },
+                "statement": {
+                    "description": "A textual statement of an assertion.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "tag": {
+                    "description": "A generic tag/label.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                }
+            },
+            "required": [
+                "object"
+            ],
+            "title": "Annotation",
+            "type": "object"
+        },
+        "Assertion": {
+            "additionalProperties": false,
+            "description": "An assertion is a statement declared to be true.",
+            "properties": {
+                "createdBy": {
+                    "description": "The identity that created a characterization of a concept.",
+                    "type": "string"
+                },
+                "description": {
+                    "description": "A human-readable description of an entity",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "externalReference": {
+                    "description": "Specifies a reference to a resource outside of the UCO.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "minItems": 0,
+                    "type": "array"
+                },
+                "hasFacet": {
+                    "description": "Further sets of properties characterizing a concept based on the particular context of the class and of the particular instance of the concept being characterized.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "modifiedTime": {
+                    "description": "Specifies the time that this particular version of the object was modified. The object creator can use the time it deems most appropriate as the time this version of the object was modified. The value of the modified property for a given object version MUST be later than or equal to the value of the created property. Object creators MUST update the modified property when creating a new version of an object. The modified timestamp MUST be precise to the nearest millisecond (exactly three digits after the decimal place in seconds).",
+                    "items": {
+                        "format": "date-time",
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "name": {
+                    "description": "The name of a particular concept characterization.",
+                    "type": "string"
+                },
+                "objectCreatedTime": {
+                    "description": "The time at which a characterization of a concept is created. This time pertains to the time of creating the record object, and is not an intrinsic characteristic of the concept.",
+                    "format": "date-time",
+                    "type": "string"
+                },
+                "objectMarking": {
+                    "description": "Marking definitions to be applied to a particular concept characterization in its entirety.",
+                    "items": {
+                        "$ref": "#/$defs/MarkingDefinitionAbstraction"
+                    },
+                    "type": "array"
+                },
+                "specVersion": {
+                    "description": "The version of UCO ontology or subontology specification used to characterize a concept.",
+                    "type": "string"
+                },
+                "statement": {
+                    "description": "A textual statement of an assertion.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "tag": {
+                    "description": "A generic tag/label.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                }
+            },
+            "title": "Assertion",
+            "type": "object"
+        },
+        "AttributedName": {
+            "additionalProperties": false,
+            "description": "An attributed name is a name of an entity issued by some attributed naming authority.",
+            "properties": {
+                "createdBy": {
+                    "description": "The identity that created a characterization of a concept.",
+                    "type": "string"
+                },
+                "description": {
+                    "description": "A human-readable description of an entity",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "externalReference": {
+                    "description": "Specifies a reference to a resource outside of the UCO.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "minItems": 0,
+                    "type": "array"
+                },
+                "hasFacet": {
+                    "description": "Further sets of properties characterizing a concept based on the particular context of the class and of the particular instance of the concept being characterized.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "modifiedTime": {
+                    "description": "Specifies the time that this particular version of the object was modified. The object creator can use the time it deems most appropriate as the time this version of the object was modified. The value of the modified property for a given object version MUST be later than or equal to the value of the created property. Object creators MUST update the modified property when creating a new version of an object. The modified timestamp MUST be precise to the nearest millisecond (exactly three digits after the decimal place in seconds).",
+                    "items": {
+                        "format": "date-time",
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "name": {
+                    "description": "The name of a particular concept characterization.",
+                    "type": "string"
+                },
+                "namingAuthority": {
+                    "description": "Specifies the naming authority that issued the name of the entity.",
+                    "type": "string"
+                },
+                "objectCreatedTime": {
+                    "description": "The time at which a characterization of a concept is created. This time pertains to the time of creating the record object, and is not an intrinsic characteristic of the concept.",
+                    "format": "date-time",
+                    "type": "string"
+                },
+                "objectMarking": {
+                    "description": "Marking definitions to be applied to a particular concept characterization in its entirety.",
+                    "items": {
+                        "$ref": "#/$defs/MarkingDefinitionAbstraction"
+                    },
+                    "type": "array"
+                },
+                "specVersion": {
+                    "description": "The version of UCO ontology or subontology specification used to characterize a concept.",
+                    "type": "string"
+                },
+                "tag": {
+                    "description": "A generic tag/label.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                }
+            },
+            "title": "AttributedName",
+            "type": "object"
+        },
+        "Bundle": {
+            "additionalProperties": false,
+            "description": "A bundle is a container for a grouping of UCO content with no presumption of shared context.",
+            "properties": {
+                "createdBy": {
+                    "description": "The identity that created a characterization of a concept.",
+                    "type": "string"
+                },
+                "description": {
+                    "description": "A human-readable description of an entity",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "externalReference": {
+                    "description": "Specifies a reference to a resource outside of the UCO.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "minItems": 0,
+                    "type": "array"
+                },
+                "hasFacet": {
+                    "description": "Further sets of properties characterizing a concept based on the particular context of the class and of the particular instance of the concept being characterized.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "modifiedTime": {
+                    "description": "Specifies the time that this particular version of the object was modified. The object creator can use the time it deems most appropriate as the time this version of the object was modified. The value of the modified property for a given object version MUST be later than or equal to the value of the created property. Object creators MUST update the modified property when creating a new version of an object. The modified timestamp MUST be precise to the nearest millisecond (exactly three digits after the decimal place in seconds).",
+                    "items": {
+                        "format": "date-time",
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "name": {
+                    "description": "The name of a particular concept characterization.",
+                    "type": "string"
+                },
+                "object": {
+                    "description": "Specifies one or more UcoObjects.",
+                    "items": {
+                        "$ref": "#/$defs/UcoObject"
+                    },
+                    "maxItems": 1,
+                    "type": "array"
+                },
+                "objectCreatedTime": {
+                    "description": "The time at which a characterization of a concept is created. This time pertains to the time of creating the record object, and is not an intrinsic characteristic of the concept.",
+                    "format": "date-time",
+                    "type": "string"
+                },
+                "objectMarking": {
+                    "description": "Marking definitions to be applied to a particular concept characterization in its entirety.",
+                    "items": {
+                        "$ref": "#/$defs/MarkingDefinitionAbstraction"
+                    },
+                    "type": "array"
+                },
+                "specVersion": {
+                    "description": "The version of UCO ontology or subontology specification used to characterize a concept.",
+                    "type": "string"
+                },
+                "tag": {
+                    "description": "A generic tag/label.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                }
+            },
+            "title": "Bundle",
+            "type": "object"
+        },
+        "Compilation": {
+            "additionalProperties": false,
+            "description": "A compilation is a grouping of things.",
+            "properties": {
+                "createdBy": {
+                    "description": "The identity that created a characterization of a concept.",
+                    "type": "string"
+                },
+                "description": {
+                    "description": "A human-readable description of an entity",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "externalReference": {
+                    "description": "Specifies a reference to a resource outside of the UCO.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "minItems": 0,
+                    "type": "array"
+                },
+                "hasFacet": {
+                    "description": "Further sets of properties characterizing a concept based on the particular context of the class and of the particular instance of the concept being characterized.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "modifiedTime": {
+                    "description": "Specifies the time that this particular version of the object was modified. The object creator can use the time it deems most appropriate as the time this version of the object was modified. The value of the modified property for a given object version MUST be later than or equal to the value of the created property. Object creators MUST update the modified property when creating a new version of an object. The modified timestamp MUST be precise to the nearest millisecond (exactly three digits after the decimal place in seconds).",
+                    "items": {
+                        "format": "date-time",
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "name": {
+                    "description": "The name of a particular concept characterization.",
+                    "type": "string"
+                },
+                "objectCreatedTime": {
+                    "description": "The time at which a characterization of a concept is created. This time pertains to the time of creating the record object, and is not an intrinsic characteristic of the concept.",
+                    "format": "date-time",
+                    "type": "string"
+                },
+                "objectMarking": {
+                    "description": "Marking definitions to be applied to a particular concept characterization in its entirety.",
+                    "items": {
+                        "$ref": "#/$defs/MarkingDefinitionAbstraction"
+                    },
+                    "type": "array"
+                },
+                "specVersion": {
+                    "description": "The version of UCO ontology or subontology specification used to characterize a concept.",
+                    "type": "string"
+                },
+                "tag": {
+                    "description": "A generic tag/label.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                }
+            },
+            "title": "Compilation",
+            "type": "object"
+        },
+        "ConfidenceFacet": {
+            "additionalProperties": false,
+            "description": "A confidence is a grouping of characteristics unique to an asserted level of certainty in the accuracy of some information.",
+            "properties": {
+                "confidence": {
+                    "description": "An asserted level of certainty in the accuracy of some information.",
+                    "maximum": 100,
+                    "minimum": 0,
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "confidence"
+            ],
+            "title": "ConfidenceFacet",
+            "type": "object"
+        },
+        "ContextualCompilation": {
+            "additionalProperties": false,
+            "description": "A contextual compilation is a grouping of things sharing some context (e.g., a set of network connections observed on a given day, all accounts associated with a given person).",
+            "properties": {
+                "createdBy": {
+                    "description": "The identity that created a characterization of a concept.",
+                    "type": "string"
+                },
+                "description": {
+                    "description": "A human-readable description of an entity",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "externalReference": {
+                    "description": "Specifies a reference to a resource outside of the UCO.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "minItems": 0,
+                    "type": "array"
+                },
+                "hasFacet": {
+                    "description": "Further sets of properties characterizing a concept based on the particular context of the class and of the particular instance of the concept being characterized.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "modifiedTime": {
+                    "description": "Specifies the time that this particular version of the object was modified. The object creator can use the time it deems most appropriate as the time this version of the object was modified. The value of the modified property for a given object version MUST be later than or equal to the value of the created property. Object creators MUST update the modified property when creating a new version of an object. The modified timestamp MUST be precise to the nearest millisecond (exactly three digits after the decimal place in seconds).",
+                    "items": {
+                        "format": "date-time",
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "name": {
+                    "description": "The name of a particular concept characterization.",
+                    "type": "string"
+                },
+                "object": {
+                    "description": "Specifies one or more UcoObjects.",
+                    "items": {
+                        "$ref": "#/$defs/UcoObject"
+                    },
+                    "type": "array"
+                },
+                "objectCreatedTime": {
+                    "description": "The time at which a characterization of a concept is created. This time pertains to the time of creating the record object, and is not an intrinsic characteristic of the concept.",
+                    "format": "date-time",
+                    "type": "string"
+                },
+                "objectMarking": {
+                    "description": "Marking definitions to be applied to a particular concept characterization in its entirety.",
+                    "items": {
+                        "$ref": "#/$defs/MarkingDefinitionAbstraction"
+                    },
+                    "type": "array"
+                },
+                "specVersion": {
+                    "description": "The version of UCO ontology or subontology specification used to characterize a concept.",
+                    "type": "string"
+                },
+                "tag": {
+                    "description": "A generic tag/label.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                }
+            },
+            "required": [
+                "object"
+            ],
+            "title": "ContextualCompilation",
+            "type": "object"
+        },
+        "ControlledVocabulary": {
+            "additionalProperties": false,
+            "description": "A controlled vocabulary is an explicitly constrained set of string values.",
+            "properties": {
+                "constrainingVocabularyName": {
+                    "description": "The name of an explicitly constrained set of string values.",
+                    "type": "string"
+                },
+                "constrainingVocabularyReference": {
+                    "description": "A reference to a specification for an explicitly constrained set of string values. The specification may be unstructured (e.g., web page listing string values) or structured (e.g. RDF/OWL enumeration).",
+                    "type": "string"
+                },
+                "createdBy": {
+                    "description": "The identity that created a characterization of a concept.",
+                    "type": "string"
+                },
+                "description": {
+                    "description": "A human-readable description of an entity",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "externalReference": {
+                    "description": "Specifies a reference to a resource outside of the UCO.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "minItems": 0,
+                    "type": "array"
+                },
+                "hasFacet": {
+                    "description": "Further sets of properties characterizing a concept based on the particular context of the class and of the particular instance of the concept being characterized.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "modifiedTime": {
+                    "description": "Specifies the time that this particular version of the object was modified. The object creator can use the time it deems most appropriate as the time this version of the object was modified. The value of the modified property for a given object version MUST be later than or equal to the value of the created property. Object creators MUST update the modified property when creating a new version of an object. The modified timestamp MUST be precise to the nearest millisecond (exactly three digits after the decimal place in seconds).",
+                    "items": {
+                        "format": "date-time",
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "name": {
+                    "description": "The name of a particular concept characterization.",
+                    "type": "string"
+                },
+                "objectCreatedTime": {
+                    "description": "The time at which a characterization of a concept is created. This time pertains to the time of creating the record object, and is not an intrinsic characteristic of the concept.",
+                    "format": "date-time",
+                    "type": "string"
+                },
+                "objectMarking": {
+                    "description": "Marking definitions to be applied to a particular concept characterization in its entirety.",
+                    "items": {
+                        "$ref": "#/$defs/MarkingDefinitionAbstraction"
+                    },
+                    "type": "array"
+                },
+                "specVersion": {
+                    "description": "The version of UCO ontology or subontology specification used to characterize a concept.",
+                    "type": "string"
+                },
+                "tag": {
+                    "description": "A generic tag/label.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "value": {
+                    "description": "A string value.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "value"
+            ],
+            "title": "ControlledVocabulary",
+            "type": "object"
+        },
+        "EnclosingCompilation": {
+            "additionalProperties": false,
+            "description": "An enclosing compilation is a container for a grouping of things.",
+            "properties": {
+                "createdBy": {
+                    "description": "The identity that created a characterization of a concept.",
+                    "type": "string"
+                },
+                "description": {
+                    "description": "A human-readable description of an entity",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "externalReference": {
+                    "description": "Specifies a reference to a resource outside of the UCO.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "minItems": 0,
+                    "type": "array"
+                },
+                "hasFacet": {
+                    "description": "Further sets of properties characterizing a concept based on the particular context of the class and of the particular instance of the concept being characterized.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "modifiedTime": {
+                    "description": "Specifies the time that this particular version of the object was modified. The object creator can use the time it deems most appropriate as the time this version of the object was modified. The value of the modified property for a given object version MUST be later than or equal to the value of the created property. Object creators MUST update the modified property when creating a new version of an object. The modified timestamp MUST be precise to the nearest millisecond (exactly three digits after the decimal place in seconds).",
+                    "items": {
+                        "format": "date-time",
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "name": {
+                    "description": "The name of a particular concept characterization.",
+                    "type": "string"
+                },
+                "object": {
+                    "description": "Specifies one or more UcoObjects.",
+                    "items": {
+                        "$ref": "#/$defs/UcoObject"
+                    },
+                    "maxItems": 1,
+                    "type": "array"
+                },
+                "objectCreatedTime": {
+                    "description": "The time at which a characterization of a concept is created. This time pertains to the time of creating the record object, and is not an intrinsic characteristic of the concept.",
+                    "format": "date-time",
+                    "type": "string"
+                },
+                "objectMarking": {
+                    "description": "Marking definitions to be applied to a particular concept characterization in its entirety.",
+                    "items": {
+                        "$ref": "#/$defs/MarkingDefinitionAbstraction"
+                    },
+                    "type": "array"
+                },
+                "specVersion": {
+                    "description": "The version of UCO ontology or subontology specification used to characterize a concept.",
+                    "type": "string"
+                },
+                "tag": {
+                    "description": "A generic tag/label.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                }
+            },
+            "title": "EnclosingCompilation",
+            "type": "object"
+        },
+        "ExternalReference": {
+            "additionalProperties": false,
+            "description": "Characteristics of a reference to a resource outside of the UCO.",
+            "properties": {
+                "definingContext": {
+                    "description": "A description of the context relevant to the definition of a particular external reference identifier.",
+                    "type": "string"
+                },
+                "externalIdentifier": {
+                    "description": "An identifier for some information defined external to the UCO context.",
+                    "type": "string"
+                },
+                "referenceURL": {
+                    "description": "A URL for some information defined external to the UCO context.",
+                    "type": "string"
+                }
+            },
+            "title": "ExternalReference",
+            "type": "object"
+        },
+        "Grouping": {
+            "additionalProperties": false,
+            "description": "A grouping is a compilation of referenced UCO content with a shared context.",
+            "properties": {
+                "context": {
+                    "description": "A description of particular contextual affinity.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "createdBy": {
+                    "description": "The identity that created a characterization of a concept.",
+                    "type": "string"
+                },
+                "description": {
+                    "description": "A human-readable description of an entity",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "externalReference": {
+                    "description": "Specifies a reference to a resource outside of the UCO.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "minItems": 0,
+                    "type": "array"
+                },
+                "hasFacet": {
+                    "description": "Further sets of properties characterizing a concept based on the particular context of the class and of the particular instance of the concept being characterized.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "modifiedTime": {
+                    "description": "Specifies the time that this particular version of the object was modified. The object creator can use the time it deems most appropriate as the time this version of the object was modified. The value of the modified property for a given object version MUST be later than or equal to the value of the created property. Object creators MUST update the modified property when creating a new version of an object. The modified timestamp MUST be precise to the nearest millisecond (exactly three digits after the decimal place in seconds).",
+                    "items": {
+                        "format": "date-time",
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "name": {
+                    "description": "The name of a particular concept characterization.",
+                    "type": "string"
+                },
+                "object": {
+                    "description": "Specifies one or more UcoObjects.",
+                    "items": {
+                        "$ref": "#/$defs/UcoObject"
+                    },
+                    "type": "array"
+                },
+                "objectCreatedTime": {
+                    "description": "The time at which a characterization of a concept is created. This time pertains to the time of creating the record object, and is not an intrinsic characteristic of the concept.",
+                    "format": "date-time",
+                    "type": "string"
+                },
+                "objectMarking": {
+                    "description": "Marking definitions to be applied to a particular concept characterization in its entirety.",
+                    "items": {
+                        "$ref": "#/$defs/MarkingDefinitionAbstraction"
+                    },
+                    "type": "array"
+                },
+                "specVersion": {
+                    "description": "The version of UCO ontology or subontology specification used to characterize a concept.",
+                    "type": "string"
+                },
+                "tag": {
+                    "description": "A generic tag/label.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                }
+            },
+            "required": [
+                "object"
+            ],
+            "title": "Grouping",
+            "type": "object"
+        },
+        "IdentityAbstraction": {
+            "additionalProperties": false,
+            "description": "An identity abstraction is a grouping of identifying characteristics unique to an individual or organization. This class is an ontological structural abstraction for this concept. Implementations of this concept should utilize the identity:Identity class.",
+            "properties": {
+                "createdBy": {
+                    "description": "The identity that created a characterization of a concept.",
+                    "type": "string"
+                },
+                "description": {
+                    "description": "A human-readable description of an entity",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "externalReference": {
+                    "description": "Specifies a reference to a resource outside of the UCO.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "minItems": 0,
+                    "type": "array"
+                },
+                "hasFacet": {
+                    "description": "Further sets of properties characterizing a concept based on the particular context of the class and of the particular instance of the concept being characterized.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "modifiedTime": {
+                    "description": "Specifies the time that this particular version of the object was modified. The object creator can use the time it deems most appropriate as the time this version of the object was modified. The value of the modified property for a given object version MUST be later than or equal to the value of the created property. Object creators MUST update the modified property when creating a new version of an object. The modified timestamp MUST be precise to the nearest millisecond (exactly three digits after the decimal place in seconds).",
+                    "items": {
+                        "format": "date-time",
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "name": {
+                    "description": "The name of a particular concept characterization.",
+                    "type": "string"
+                },
+                "objectCreatedTime": {
+                    "description": "The time at which a characterization of a concept is created. This time pertains to the time of creating the record object, and is not an intrinsic characteristic of the concept.",
+                    "format": "date-time",
+                    "type": "string"
+                },
+                "objectMarking": {
+                    "description": "Marking definitions to be applied to a particular concept characterization in its entirety.",
+                    "items": {
+                        "$ref": "#/$defs/MarkingDefinitionAbstraction"
+                    },
+                    "type": "array"
+                },
+                "specVersion": {
+                    "description": "The version of UCO ontology or subontology specification used to characterize a concept.",
+                    "type": "string"
+                },
+                "tag": {
+                    "description": "A generic tag/label.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                }
+            },
+            "title": "IdentityAbstraction",
+            "type": "object"
+        },
+        "Item": {
+            "additionalProperties": false,
+            "description": "An item is a distinct article or unit.",
+            "properties": {
+                "createdBy": {
+                    "description": "The identity that created a characterization of a concept.",
+                    "type": "string"
+                },
+                "description": {
+                    "description": "A human-readable description of an entity",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "externalReference": {
+                    "description": "Specifies a reference to a resource outside of the UCO.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "minItems": 0,
+                    "type": "array"
+                },
+                "hasFacet": {
+                    "description": "Further sets of properties characterizing a concept based on the particular context of the class and of the particular instance of the concept being characterized.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "modifiedTime": {
+                    "description": "Specifies the time that this particular version of the object was modified. The object creator can use the time it deems most appropriate as the time this version of the object was modified. The value of the modified property for a given object version MUST be later than or equal to the value of the created property. Object creators MUST update the modified property when creating a new version of an object. The modified timestamp MUST be precise to the nearest millisecond (exactly three digits after the decimal place in seconds).",
+                    "items": {
+                        "format": "date-time",
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "name": {
+                    "description": "The name of a particular concept characterization.",
+                    "type": "string"
+                },
+                "objectCreatedTime": {
+                    "description": "The time at which a characterization of a concept is created. This time pertains to the time of creating the record object, and is not an intrinsic characteristic of the concept.",
+                    "format": "date-time",
+                    "type": "string"
+                },
+                "objectMarking": {
+                    "description": "Marking definitions to be applied to a particular concept characterization in its entirety.",
+                    "items": {
+                        "$ref": "#/$defs/MarkingDefinitionAbstraction"
+                    },
+                    "type": "array"
+                },
+                "specVersion": {
+                    "description": "The version of UCO ontology or subontology specification used to characterize a concept.",
+                    "type": "string"
+                },
+                "tag": {
+                    "description": "A generic tag/label.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                }
+            },
+            "title": "Item",
+            "type": "object"
+        },
+        "MarkingDefinitionAbstraction": {
+            "additionalProperties": false,
+            "description": "A marking definition abstraction is a grouping of characteristics unique to the expression of a specific data marking conveying restrictions, permissions, and other guidance for how marked data can be used and shared. This class is an ontological structural abstraction for this concept. Implementations of this concept should utilize the marking MarkingDefinition class.",
+            "properties": {
+                "createdBy": {
+                    "description": "The identity that created a characterization of a concept.",
+                    "type": "string"
+                },
+                "description": {
+                    "description": "A human-readable description of an entity",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "externalReference": {
+                    "description": "Specifies a reference to a resource outside of the UCO.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "minItems": 0,
+                    "type": "array"
+                },
+                "hasFacet": {
+                    "description": "Further sets of properties characterizing a concept based on the particular context of the class and of the particular instance of the concept being characterized.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "modifiedTime": {
+                    "description": "Specifies the time that this particular version of the object was modified. The object creator can use the time it deems most appropriate as the time this version of the object was modified. The value of the modified property for a given object version MUST be later than or equal to the value of the created property. Object creators MUST update the modified property when creating a new version of an object. The modified timestamp MUST be precise to the nearest millisecond (exactly three digits after the decimal place in seconds).",
+                    "items": {
+                        "format": "date-time",
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "name": {
+                    "description": "The name of a particular concept characterization.",
+                    "type": "string"
+                },
+                "objectCreatedTime": {
+                    "description": "The time at which a characterization of a concept is created. This time pertains to the time of creating the record object, and is not an intrinsic characteristic of the concept.",
+                    "format": "date-time",
+                    "type": "string"
+                },
+                "objectMarking": {
+                    "description": "Marking definitions to be applied to a particular concept characterization in its entirety.",
+                    "items": {
+                        "$ref": "#/$defs/MarkingDefinitionAbstraction"
+                    },
+                    "type": "array"
+                },
+                "specVersion": {
+                    "description": "The version of UCO ontology or subontology specification used to characterize a concept.",
+                    "type": "string"
+                },
+                "tag": {
+                    "description": "A generic tag/label.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                }
+            },
+            "title": "MarkingDefinitionAbstraction",
+            "type": "object"
+        },
+        "ModusOperandi": {
+            "additionalProperties": false,
+            "description": "A modus operandi is a particular method of operation (how a particular entity behaves or the resources they use).",
+            "properties": {
+                "createdBy": {
+                    "description": "The identity that created a characterization of a concept.",
+                    "type": "string"
+                },
+                "description": {
+                    "description": "A human-readable description of an entity",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "externalReference": {
+                    "description": "Specifies a reference to a resource outside of the UCO.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "minItems": 0,
+                    "type": "array"
+                },
+                "hasFacet": {
+                    "description": "Further sets of properties characterizing a concept based on the particular context of the class and of the particular instance of the concept being characterized.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "modifiedTime": {
+                    "description": "Specifies the time that this particular version of the object was modified. The object creator can use the time it deems most appropriate as the time this version of the object was modified. The value of the modified property for a given object version MUST be later than or equal to the value of the created property. Object creators MUST update the modified property when creating a new version of an object. The modified timestamp MUST be precise to the nearest millisecond (exactly three digits after the decimal place in seconds).",
+                    "items": {
+                        "format": "date-time",
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "name": {
+                    "description": "The name of a particular concept characterization.",
+                    "type": "string"
+                },
+                "objectCreatedTime": {
+                    "description": "The time at which a characterization of a concept is created. This time pertains to the time of creating the record object, and is not an intrinsic characteristic of the concept.",
+                    "format": "date-time",
+                    "type": "string"
+                },
+                "objectMarking": {
+                    "description": "Marking definitions to be applied to a particular concept characterization in its entirety.",
+                    "items": {
+                        "$ref": "#/$defs/MarkingDefinitionAbstraction"
+                    },
+                    "type": "array"
+                },
+                "specVersion": {
+                    "description": "The version of UCO ontology or subontology specification used to characterize a concept.",
+                    "type": "string"
+                },
+                "tag": {
+                    "description": "A generic tag/label.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                }
+            },
+            "title": "ModusOperandi",
+            "type": "object"
+        },
+        "Relationship": {
+            "additionalProperties": false,
+            "description": "A relationship is a grouping of characteristics unique to an assertion that one or more objects are related to another object in some way.",
+            "properties": {
+                "createdBy": {
+                    "description": "The identity that created a characterization of a concept.",
+                    "type": "string"
+                },
+                "description": {
+                    "description": "A human-readable description of an entity",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "endTime": {
+                    "description": "The ending time of a time range.",
+                    "items": {
+                        "format": "date-time",
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "externalReference": {
+                    "description": "Specifies a reference to a resource outside of the UCO.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "minItems": 0,
+                    "type": "array"
+                },
+                "hasFacet": {
+                    "description": "Further sets of properties characterizing a concept based on the particular context of the class and of the particular instance of the concept being characterized.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "isDirectional": {
+                    "description": "A specification whether or not a relationship assertion is limited to the context FROM a source object(s) TO a target object.",
+                    "type": "boolean"
+                },
+                "kindOfRelationship": {
+                    "description": "A characterization of the nature of a relationship between objects.",
+                    "type": "string"
+                },
+                "modifiedTime": {
+                    "description": "Specifies the time that this particular version of the object was modified. The object creator can use the time it deems most appropriate as the time this version of the object was modified. The value of the modified property for a given object version MUST be later than or equal to the value of the created property. Object creators MUST update the modified property when creating a new version of an object. The modified timestamp MUST be precise to the nearest millisecond (exactly three digits after the decimal place in seconds).",
+                    "items": {
+                        "format": "date-time",
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "name": {
+                    "description": "The name of a particular concept characterization.",
+                    "type": "string"
+                },
+                "objectCreatedTime": {
+                    "description": "The time at which a characterization of a concept is created. This time pertains to the time of creating the record object, and is not an intrinsic characteristic of the concept.",
+                    "format": "date-time",
+                    "type": "string"
+                },
+                "objectMarking": {
+                    "description": "Marking definitions to be applied to a particular concept characterization in its entirety.",
+                    "items": {
+                        "$ref": "#/$defs/MarkingDefinitionAbstraction"
+                    },
+                    "type": "array"
+                },
+                "source": {
+                    "description": "The originating node of a specified relationship.",
+                    "items": {
+                        "$ref": "#/$defs/UcoObject"
+                    },
+                    "type": "array"
+                },
+                "specVersion": {
+                    "description": "The version of UCO ontology or subontology specification used to characterize a concept.",
+                    "type": "string"
+                },
+                "startTime": {
+                    "description": "The initial time of a time range.",
+                    "items": {
+                        "format": "date-time",
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "tag": {
+                    "description": "A generic tag/label.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "target": {
+                    "$ref": "#/$defs/UcoObject",
+                    "description": "The terminating node of a specified relationship."
+                }
+            },
+            "required": [
+                "isDirectional",
+                "source",
+                "target"
+            ],
+            "title": "Relationship",
+            "type": "object"
+        },
+        "UcoInherentCharacterizationThing": {
+            "additionalProperties": false,
+            "description": "A UCO inherent characterization thing is a grouping of characteristics unique to a particular inherent aspect of a UCO domain object.",
+            "title": "UcoInherentCharacterizationThing",
+            "type": "object"
+        },
+        "UcoObject": {
+            "additionalProperties": false,
+            "description": "A UCO object is a representation of a fundamental concept either directly inherent to the cyber domain or indirectly related to the cyber domain and necessary for contextually characterizing cyber domain concepts and relationships. Within the Unified Cyber Ontology (UCO) structure this is the base class acting as a consistent, unifying and interoperable foundation for all explicit and inter-relatable content objects.",
+            "properties": {
+                "createdBy": {
+                    "description": "The identity that created a characterization of a concept.",
+                    "type": "string"
+                },
+                "description": {
+                    "description": "A human-readable description of an entity",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "externalReference": {
+                    "description": "Specifies a reference to a resource outside of the UCO.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "minItems": 0,
+                    "type": "array"
+                },
+                "hasFacet": {
+                    "description": "Further sets of properties characterizing a concept based on the particular context of the class and of the particular instance of the concept being characterized.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "modifiedTime": {
+                    "description": "Specifies the time that this particular version of the object was modified. The object creator can use the time it deems most appropriate as the time this version of the object was modified. The value of the modified property for a given object version MUST be later than or equal to the value of the created property. Object creators MUST update the modified property when creating a new version of an object. The modified timestamp MUST be precise to the nearest millisecond (exactly three digits after the decimal place in seconds).",
+                    "items": {
+                        "format": "date-time",
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "name": {
+                    "description": "The name of a particular concept characterization.",
+                    "type": "string"
+                },
+                "objectCreatedTime": {
+                    "description": "The time at which a characterization of a concept is created. This time pertains to the time of creating the record object, and is not an intrinsic characteristic of the concept.",
+                    "format": "date-time",
+                    "type": "string"
+                },
+                "objectMarking": {
+                    "description": "Marking definitions to be applied to a particular concept characterization in its entirety.",
+                    "items": {
+                        "$ref": "#/$defs/MarkingDefinitionAbstraction"
+                    },
+                    "type": "array"
+                },
+                "specVersion": {
+                    "description": "The version of UCO ontology or subontology specification used to characterize a concept.",
+                    "type": "string"
+                },
+                "tag": {
+                    "description": "A generic tag/label.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                }
+            },
+            "title": "UcoObject",
+            "type": "object"
+        }
+    },
+    "$id": "https://w3id.org/lmodel/uco-core",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "additionalProperties": true,
+    "metamodel_version": "1.7.0",
+    "title": "uco-core",
+    "type": "object",
+    "version": "1.1.0"
+}
